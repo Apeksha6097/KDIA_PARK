@@ -13,7 +13,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int _currentIndex = 1; // Temporarily set to Usage screen for review
+  int _currentIndex = 3; // Temporarily set to Profile screen for review
 
   final List<Widget> _screens = [
     const HomeScreen(),

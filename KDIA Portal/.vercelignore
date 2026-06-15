@@ -1,0 +1,30 @@
+# Vercel Ignore File
+# Files and directories to exclude from Vercel deployment
+
+# Original server folder (using /api instead)
+server/
+
+# Development files
+node_modules/
+*.log
+.env
+.env.local
+
+# Temporary files
+temp-octave-demo/
+server.zip
+server (2).zip
+php-backend.zip
+php-backend/
+
+# Database backups
+*.sql
+database.sqlite
+
+# Documentation
+Documents/
+Media/
+
+# Git
+.git/
+.gitignore

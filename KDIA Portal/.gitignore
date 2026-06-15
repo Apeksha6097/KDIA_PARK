@@ -1,0 +1,33 @@
+# Node.js
+node_modules/
+dist/
+build/
+.env
+.env.local
+
+# Vite
+*.local
+
+# SQLite
+*.sqlite
+*.sqlite-journal
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Vercel Deployment Exception
+!api/database.sqlite
+.vercel
+.env*.local
+
+# Expo and Coverage
+.expo/
+coverage/
+
+# Logs
+*.log

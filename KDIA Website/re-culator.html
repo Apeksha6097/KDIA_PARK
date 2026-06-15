@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re-Culator | KDIA Re Park</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { green: '#8DC63F', dark: '#008244' },
+                        charcoal: '#0e1111'
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Outfit', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-white text-slate-900 selection:bg-brand-green/30">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 py-8 transition-all duration-500">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="assets/images/logo.png" alt="KDIA RE PARK" class="h-10 w-auto">
+            </a>
+            <div class="hidden md:flex items-center space-x-10 text-slate-600 font-medium">
+                <a href="index.html" class="hover:text-brand-green transition-colors">Home</a>
+                <a href="about.html" class="hover:text-brand-green transition-colors">Company & Energy Solutions</a>
+
+                <!-- Re-Culator Link (Flagship Tool - Enhanced) -->
+                <a href="re-culator.html"
+                    class="flex items-center space-x-2 text-brand-green font-bold text-lg transition-all relative group shadow-sm hover:shadow-md px-3 py-1.5 rounded-full">
+                    <div class="w-5 h-5 bg-brand-green rounded-full flex items-center justify-center">
+                        <i data-lucide="plus" class="w-3 h-3 text-white"></i>
+                    </div>
+                    <span class="relative">
+                        Re-Culator
+                        <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-brand-green transition-all"></span>
+                    </span>
+                </a>
+
+                <!-- Govt. Schemes & Policies Dropdown -->
+                <div class="relative group">
+                    <a href="govt-schemes.html"
+                        class="flex items-center space-x-1 hover:text-brand-green transition-colors">
+                        <span>Govt. Schemes & Policies</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div
+                        class="absolute left-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-slate-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 py-2 z-50">
+                        <a href="govt-schemes.html#policies"
+                            class="block px-6 py-3 text-slate-600 hover:text-brand-green hover:bg-slate-50 transition-colors">Policies</a>
+                        <a href="govt-schemes.html#schemes"
+                            class="block px-6 py-3 text-slate-600 hover:text-brand-green hover:bg-slate-50 transition-colors">Schemes</a>
+                        <a href="govt-schemes.html#guidelines"
+                            class="block px-6 py-3 text-slate-600 hover:text-brand-green hover:bg-slate-50 transition-colors">Guidelines</a>
+                        <a href="govt-schemes.html#tariff-orders"
+                            class="block px-6 py-3 text-slate-600 hover:text-brand-green hover:bg-slate-50 transition-colors">Tariff
+                            Orders</a>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="hover:text-brand-green transition-colors">Contact Us</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-slate-900 transition-colors hover:text-brand-green">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-brand-green/10 py-6 px-6 flex flex-col space-y-4 shadow-xl">
+            <a href="index.html" class="text-lg">Home</a>
+            <a href="about.html" class="text-lg">Company & Energy Solutions</a>
+            <a href="re-culator.html" class="text-lg font-bold text-brand-green">Re-Culator +</a>
+            <a href="govt-schemes.html" class="text-lg">Govt. Schemes & Policies</a>
+            <a href="contact.html" class="text-lg text-brand-green font-bold">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-64 pb-20 relative bg-gradient-to-br from-brand-green/5 to-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h1 class="text-6xl font-display font-bold mb-6 reveal text-slate-900">
+                    <span class="text-brand-green">Re-Culator</span>
+                </h1>
+                <p class="text-xl text-slate-600 font-normal reveal">
+                    Smart Renewable Energy Financial Modelling Tool
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Cards Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8 mb-16">
+                    <!-- Card 1: Savings & ROI Calculator -->
+                    <div onclick="showCalculator('savings')"
+                        class="cursor-pointer group bg-gradient-to-br from-brand-green/10 to-brand-green/5 rounded-3xl p-8 border-2 border-brand-green/20 hover:border-brand-green/40 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <div class="flex items-start justify-between mb-6">
+                            <div
+                                class="w-16 h-16 bg-brand-green/20 rounded-2xl flex items-center justify-center group-hover:bg-brand-green/30 transition-colors">
+                                <i data-lucide="calculator" class="text-brand-green w-8 h-8"></i>
+                            </div>
+                            <div
+                                class="px-3 py-1 bg-brand-green text-white text-xs font-bold rounded-full uppercase tracking-wide">
+                                Active
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-display font-bold mb-4 text-slate-900">
+                            Savings & ROI Calculator
+                        </h3>
+                        <p class="text-slate-600 font-light leading-relaxed mb-6">
+                            Estimate savings, investment, ROI and environmental impact based on your energy consumption
+                            and financing options.
+                        </p>
+                        <div
+                            class="flex items-center text-brand-green font-bold group-hover:translate-x-2 transition-transform">
+                            <span>Open Calculator</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Scheme-Based Calculator (Coming Soon) -->
+                    <div onclick="showCalculator('scheme')"
+                        class="cursor-pointer group bg-gradient-to-br from-brand-green/10 to-brand-green/5 rounded-3xl p-8 border-2 border-brand-green/20 hover:border-brand-green/40 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <div class="flex items-start justify-between mb-6">
+                            <div
+                                class="w-16 h-16 bg-brand-green/20 rounded-2xl flex items-center justify-center group-hover:bg-brand-green/30 transition-colors">
+                                <i data-lucide="layers" class="text-brand-green w-8 h-8"></i>
+                            </div>
+                            <div
+                                class="px-3 py-1 bg-brand-green text-white text-xs font-bold rounded-full uppercase tracking-wide">
+                                Active
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-display font-bold mb-4 text-slate-900">
+                            Scheme-Based Calculator
+                        </h3>
+                        <p class="text-slate-600 font-light leading-relaxed mb-6">
+                            Compare VNM, GNM, Captive and Group Captive models with advanced financial analysis.
+                        </p>
+                        <div
+                            class="flex items-center text-brand-green font-bold group-hover:translate-x-2 transition-transform">
+                            <span>Open Calculator</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Calculator Section -->
+                <div id="calculator-container" class="hidden">
+                    <!-- Savings Calculator will be inserted here -->
+                </div>
+
+                <!-- Scheme Calculator Section (Dynamic) -->
+                <div id="scheme-calculator-container" class="hidden">
+                    <!-- Scheme Calculator will be inserted here -->
+                </div>
+
+                <!-- Scheme Calculator Placeholder (Original - Keeping hidden if we want to replace it) -->
+                <div id="scheme-placeholder" class="hidden">
+                    <div class="bg-slate-50 rounded-3xl p-12 text-center border-2 border-dashed border-slate-200">
+                        <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="sparkles" class="text-amber-600 w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-3xl font-display font-bold mb-4 text-slate-900">
+                            Scheme-Based Calculator
+                        </h3>
+                        <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-6">
+                            This calculator will allow scheme-level comparisons and financial modelling across VNM, GNM,
+                            Captive, and Group Captive models.
+                        </p>
+                        <div class="inline-flex items-center px-6 py-3 bg-amber-500 text-white rounded-full font-bold">
+                            <i data-lucide="clock" class="w-5 h-5 mr-2"></i>
+                            Launching Soon
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Minimal Footer -->
+    <footer class="py-20 bg-white border-t border-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="md:col-span-2">
+                    <img src="assets/images/logo.png" alt="KDIA RE PARK" class="h-10 w-auto mb-6">
+                    <p class="text-slate-500 font-light leading-relaxed max-w-md">
+                        Empowering communities with clean, renewable energy solutions through innovative solar
+                        infrastructure and sustainable development.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-6 font-display">Quick Links</h4>
+                    <ul class="space-y-3 text-slate-500 font-light">
+                        <li><a href="index.html" class="hover:text-brand-green transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-brand-green transition-colors">About Us</a></li>
+                        <li><a href="govt-schemes.html" class="hover:text-brand-green transition-colors">Govt.
+                                Schemes</a></li>
+                        <li><a href="re-culator.html" class="hover:text-brand-green transition-colors">Re-Culator</a>
+                        </li>
+                        <li><a href="contact.html" class="hover:text-brand-green transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-6 font-display">Contact</h4>
+                    <ul class="space-y-3 text-slate-500 font-light">
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-brand-green mt-1 flex-shrink-0"></i>
+                            <span>KDIA Re Park, Renewable Energy Zone</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-brand-green flex-shrink-0"></i>
+                            <span>info@kdiarepark.com</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-brand-green flex-shrink-0"></i>
+                            <span>+91 XXX XXX XXXX</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-100 pt-8 text-center">
+                <p class="text-slate-400 text-sm tracking-widest uppercase">&copy; 2024 KDIA Re Park. Powered by the
+                    sun.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Assistant -->
+    <div id="ai-chat-btn" class="chat-fab">
+        <i data-lucide="message-circle" class="mr-2"></i>
+        <span>Ask KDIA</span>
+    </div>
+
+    <div id="ai-chat-panel" class="chat-panel">
+        <div class="chat-header">
+            <div>
+                <h4 class="font-bold text-lg">KDIA Assistant</h4>
+                <p class="text-xs opacity-80">Solar & Renewable Expert</p>
+            </div>
+            <button id="close-chat" class="hover:rotate-90 transition-transform">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+        </div>
+        <div id="chat-messages" class="chat-messages">
+            <div class="message ai">
+                Hello! I'm here to help you understand clean energy solutions and KDIA Re Park's offerings. How can I
+                assist you today?
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Ask about Net Metering, VNM..." class="chat-input">
+            <button id="send-chat" class="chat-send">
+                <i data-lucide="send" class="w-4 h-4"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/scheme-calculator.js"></script>
+    <script>
+        // Calculator card interaction
+        async function showCalculator(type) {
+            console.log('showCalculator called with:', type);
+            const calculatorContainer = document.getElementById('calculator-container');
+            const schemeCalculatorContainer = document.getElementById('scheme-calculator-container');
+            const schemePlaceholder = document.getElementById('scheme-placeholder');
+
+            if (!calculatorContainer || !schemeCalculatorContainer || !schemePlaceholder) {
+                console.error('Critical Error: Calculator containers not found in DOM');
+                return;
+            }
+
+            if (type === 'savings') {
+                // Show savings calculator
+                calculatorContainer.classList.remove('hidden');
+                schemePlaceholder.classList.add('hidden');
+                schemeCalculatorContainer.classList.add('hidden');
+
+                // Load calculator HTML if not already loaded
+                // Check if there's any actual content (divs) to avoid empty shell
+                const hasContent = calculatorContainer.querySelector('div') !== null;
+                console.log('Calculator container has content:', hasContent);
+
+                if (!hasContent) {
+                    // Show loading state
+                    calculatorContainer.innerHTML = '<div class="flex justify-center items-center p-12"><div class="animate-spin rounded-full h-12 w-12 border-b-2 border-brand-green"></div></div>';
+
+                    try {
+                        await loadSavingsCalculator();
+                        console.log('Calculator HTML injected successfully');
+                    } catch (e) {
+                        console.error('Error injecting calculator HTML:', e);
+                        calculatorContainer.innerHTML = '<div class="text-red-500 p-8 text-center bg-red-50 rounded-xl border border-red-100">Error loading calculator. Please refresh the page.</div>';
+                    }
+                }
+
+                // Smooth scroll to calculator
+                setTimeout(() => {
+                    calculatorContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            } else if (type === 'scheme') {
+                // Show scheme calculator, hide others
+                calculatorContainer.classList.add('hidden');
+                schemePlaceholder.classList.add('hidden');
+                schemeCalculatorContainer.classList.remove('hidden');
+
+                const hasContent = schemeCalculatorContainer.querySelector('div') !== null;
+
+                if (!hasContent) {
+                    // Show loading state
+                    schemeCalculatorContainer.innerHTML = '<div class="flex justify-center items-center p-12"><div class="animate-spin rounded-full h-12 w-12 border-b-2 border-brand-green"></div></div>';
+                    try {
+                        await loadSchemeCalculator();
+                    } catch (e) {
+                        schemeCalculatorContainer.innerHTML = '<div class="text-red-500 p-8 text-center bg-red-50 rounded-xl border border-red-100">Error loading calculator.</div>';
+                    }
+                }
+
+                // Smooth scroll
+                setTimeout(() => {
+                    schemeCalculatorContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+        }
+
+        async function loadSavingsCalculator() {
+            const calculatorContainer = document.getElementById('calculator-container');
+
+            try {
+                // Fetch the standalone component
+                const response = await fetch('assets/components/savings-calculator.html');
+                if (!response.ok) {
+                    throw new Error(`Failed to load component: ${response.status} ${response.statusText}`);
+                }
+
+                const calculatorHTML = await response.text();
+                calculatorContainer.innerHTML = calculatorHTML;
+
+                // Reinitialize Lucide icons after inserting HTML
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                } else {
+                    console.warn('Lucide icons library not found');
+                }
+
+                // Reinitialize calculator logic from scripts.js
+                if (typeof initSavingsCalculator === 'function') {
+                    console.log('Initializing calculator logic...');
+                    initSavingsCalculator();
+
+                    // Trigger initial calculation update
+                    const monthlyBillInput = document.getElementById('monthly-bill');
+                    if (monthlyBillInput) {
+                        const event = new Event('input', { bubbles: true });
+                        monthlyBillInput.dispatchEvent(event);
+                    }
+                } else {
+                    console.error('initSavingsCalculator function not found in scripts.js');
+                }
+            } catch (error) {
+                console.error('Fatal error in loadSavingsCalculator:', error);
+                throw error; // Re-throw to be caught by showCalculator
+            }
+        }
+
+        async function loadSchemeCalculator() {
+            const container = document.getElementById('scheme-calculator-container');
+            try {
+                const response = await fetch('assets/components/scheme-calculator.html');
+                if (!response.ok) throw new Error('Failed to load scheme component');
+                const html = await response.text();
+                container.innerHTML = html;
+
+                if (typeof lucide !== 'undefined') lucide.createIcons();
+
+                if (typeof initSchemeCalculator === 'function') {
+                    initSchemeCalculator();
+                } else {
+                    console.error('initSchemeCalculator not found');
+                }
+            } catch (error) {
+                console.error('Error loading scheme calculator', error);
+                throw error;
+            }
+        }
+    </script>
+</body>
+
+</html>

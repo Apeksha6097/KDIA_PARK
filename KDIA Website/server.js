@@ -1,50 +1,25 @@
-const http = require('http');
-const fs = require('fs');
+const express = require('express');
 const path = require('path');
 
-const PORT = 8001;
+const app = express();
+const PORT = 3001;
 
-const MIME_TYPES = {
-  '.html': 'text/html',
-  '.js': 'text/javascript',
-  '.css': 'text/css',
-  '.json': 'application/json',
-  '.png': 'image/png',
-  '.jpg': 'image/jpg',
-  '.gif': 'image/gif',
-  '.svg': 'image/svg+xml',
-  '.wav': 'audio/wav',
-  '.mp4': 'video/mp4',
-  '.woff': 'application/font-woff',
-  '.ttf': 'application/font-ttf',
-  '.eot': 'application/vnd.ms-fontobject',
-  '.otf': 'application/font-otf',
-  '.wasm': 'application/wasm'
-};
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-http.createServer((req, res) => {
-  let filePath = '.' + req.url;
-  if (filePath === './') {
-    filePath = './index.html';
-  }
+// Serve static assets for the portal
+app.use('/land-owner-portal', express.static(path.join(__dirname, 'land-owner-portal')));
 
-  const extname = String(path.extname(filePath)).toLowerCase();
-  const contentType = MIME_TYPES[extname] || 'application/octet-stream';
+// Serve root static assets (index.html, about.html, etc.)
+app.use(express.static(path.join(__dirname, '.')));
 
-  fs.readFile(filePath, (error, content) => {
-    if (error) {
-      if (error.code == 'ENOENT') {
-        res.writeHead(404);
-        res.end('File not found');
-      } else {
-        res.writeHead(500);
-        res.end('Server error: ' + error.code);
-      }
-    } else {
-      res.writeHead(200, { 'Content-Type': contentType });
-      res.end(content, 'utf-8');
-    }
-  });
-}).listen(PORT);
+// API routes (placeholder modules)
+app.use('/api/auth', require('./land-owner-portal/api/auth'));
+app.use('/api/land', require('./land-owner-portal/api/land'));
+app.use('/api/documents', require('./land-owner-portal/api/documents'));
+app.use('/api/notifications', require('./land-owner-portal/api/notifications'));
 
-console.log(`Server running at http://localhost:${PORT}/`);
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
+});

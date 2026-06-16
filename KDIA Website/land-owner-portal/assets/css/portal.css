@@ -1,0 +1,66 @@
+/* Portal CSS – using parent palette and glassmorphism */
+:root {
+  --primary-hue: 210; /* blueish */
+  --primary: hsl(var(--primary-hue), 70%, 55%);
+  --bg: hsl(0, 0%, 98%);
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --shadow: rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: #333;
+}
+
+a { color: var(--primary); text-decoration: none; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px var(--shadow);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover { background: hsl(var(--primary-hue), 70%, 45%); }
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+}
+
+/* Password strength bar */
+#pwd-strength {
+  height: 5px;
+  background: #e0e0e0;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+#pwd-strength div {
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s;
+}

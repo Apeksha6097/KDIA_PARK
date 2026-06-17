@@ -24,6 +24,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Language Switcher -->
+    <script src="assets/js/translate.js"></script>
 </head>
 
 <body class="bg-white text-slate-900 selection:bg-brand-green/30">
@@ -71,12 +74,19 @@
                     <i data-lucide="plus-circle" class="w-4 h-4"></i>
                 </a>
 
-                <a href="land-verification.html" class="hover:text-brand-green transition-colors">Land Verification</a>
                 <a href="contact.html" class="hover:text-brand-green transition-colors">Contact Us</a>
             </div>
-            <button id="menu-btn" class="md:hidden text-slate-900 transition-colors hover:text-brand-green">
-                <i data-lucide="menu"></i>
-            </button>
+            <div class="flex items-center space-x-4">
+                <!-- Language Toggle Button -->
+                <button onclick="toggleLanguage()" class="lang-toggle-btn text-xs font-semibold px-3 py-1.5 rounded-full border border-slate-200 hover:border-brand-green bg-white hover:text-brand-green transition-all shadow-sm flex items-center space-x-1">
+                    <i data-lucide="globe" class="w-3.5 h-3.5 text-slate-500"></i>
+                    <span class="lang-btn-text">हिन्दी</span>
+                </button>
+                
+                <button id="menu-btn" class="md:hidden text-slate-900 transition-colors hover:text-brand-green">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
         </div>
 
         <!-- Mobile Menu -->
@@ -86,7 +96,6 @@
             <a href="about.html" class="text-lg">Company & Energy Solutions</a>
             <a href="govt-schemes.html" class="text-lg">Govt. Schemes & Policies</a>
             <a href="re-culator.html" class="text-lg font-bold text-brand-green">Re-Culator +</a>
-            <a href="land-verification.html" class="text-lg">Land Verification</a>
             <a href="contact.html" class="text-lg text-brand-green font-bold">Contact Us</a>
         </div>
     </nav>

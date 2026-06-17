@@ -77,14 +77,24 @@ document.addEventListener('DOMContentLoaded', () => {
         gsap.registerPlugin(ScrollTrigger);
 
         gsap.utils.toArray('.reveal').forEach((el) => {
+            let delay = 0;
+            const inlineDelay = el.style.transitionDelay;
+            if (inlineDelay) {
+                const val = parseFloat(inlineDelay);
+                if (!isNaN(val)) {
+                    // Cap max stagger delay at 200ms and convert to seconds
+                    delay = Math.min(val, 200) / 1000;
+                }
+            }
             gsap.to(el, {
                 opacity: 1,
                 y: 0,
-                duration: 1,
+                duration: 0.6,
+                delay: delay,
                 ease: 'power2.out',
                 scrollTrigger: {
                     trigger: el,
-                    start: 'top 90%',
+                    start: 'top 85%',
                     toggleActions: 'play none none reverse'
                 }
             });
@@ -217,10 +227,9 @@ function initEnergyModelTabs() {
             tabs.forEach(t => t.classList.remove('active'));
             contents.forEach(c => c.classList.remove('active'));
             tab.classList.add('active');
-            const targetContent = document.getElementById(targetId);
             if (targetContent && typeof gsap !== 'undefined') {
                 targetContent.classList.add('active');
-                gsap.fromTo(targetContent, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' });
+                gsap.fromTo(targetContent, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' });
             }
         });
     });
@@ -366,7 +375,7 @@ function initGovtSchemes() {
         if (typeof gsap !== 'undefined' && container.children.length > 0) {
             gsap.fromTo(container.children,
                 { opacity: 0, y: 20 },
-                { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: 'power2.out' }
+                { opacity: 1, y: 0, duration: 0.3, stagger: 0.05, ease: 'power2.out' }
             );
         }
     };
@@ -490,7 +499,7 @@ function initHeroAnimation() {
             // Reveal the sun container from opacity 0
             gsap.to(heroSun, {
                 opacity: 1,
-                duration: 2.5,
+                duration: 1.2,
                 ease: 'power2.out',
                 delay: 0.2
             });

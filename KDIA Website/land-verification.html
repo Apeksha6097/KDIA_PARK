@@ -40,6 +40,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Language Switcher & Locations Dropdown -->
+    <script src="assets/js/translate.js"></script>
+    <script src="assets/js/india-locations.js"></script>
 </head>
 
 <body class="bg-slate-50 text-slate-900 selection:bg-brand-green/30">
@@ -86,13 +90,20 @@
                     <i data-lucide="plus-circle" class="w-4 h-4"></i>
                 </a>
 
-                <a href="land-verification.html" class="text-brand-green underline decoration-brand-green decoration-2 underline-offset-8">Land Verification</a>
                 <a href="contact.html" class="hover:text-brand-green transition-colors">Contact Us</a>
             </div>
 
-            <button id="menu-btn" class="md:hidden text-slate-900 transition-colors hover:text-brand-green">
-                <i data-lucide="menu"></i>
-            </button>
+            <div class="flex items-center space-x-4">
+                <!-- Language Toggle Button -->
+                <button onclick="toggleLanguage()" class="lang-toggle-btn text-xs font-semibold px-3 py-1.5 rounded-full border border-slate-200 hover:border-brand-green bg-white hover:text-brand-green transition-all shadow-sm flex items-center space-x-1">
+                    <i data-lucide="globe" class="w-3.5 h-3.5 text-slate-500"></i>
+                    <span class="lang-btn-text">हिन्दी</span>
+                </button>
+                
+                <button id="menu-btn" class="md:hidden text-slate-900 transition-colors hover:text-brand-green">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
         </div>
 
         <!-- Mobile Menu -->
@@ -102,7 +113,6 @@
             <a href="about.html" class="text-lg">Company & Energy Solutions</a>
             <a href="govt-schemes.html" class="text-lg">Govt. Schemes & Policies</a>
             <a href="re-culator.html" class="text-lg font-bold text-brand-green">Re-Culator +</a>
-            <a href="land-verification.html" class="text-lg font-bold text-brand-green">Land Verification</a>
             <a href="contact.html" class="text-lg text-brand-green font-bold">Contact Us</a>
         </div>
     </nav>
@@ -137,12 +147,6 @@
                         </div>
 
                         <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-sm font-semibold mb-2 text-slate-700">Number of Owners <span class="text-red-500">*</span></label>
-                                <input type="number" id="numOwners" min="1" max="100" value="1"
-                                    class="w-full bg-white border border-brand-green/20 rounded-xl px-4 py-3.5 focus:border-brand-green outline-none transition-all placeholder:text-slate-300 font-medium text-slate-800 focus:ring-2 focus:ring-brand-green/10">
-                            </div>
-
                             <div>
                                 <label class="block text-sm font-semibold mb-2 text-slate-700">Full Name <span class="text-red-500">*</span></label>
                                 <input type="text" id="fullName" placeholder="Enter full name of primary owner"
@@ -184,18 +188,28 @@
 
                         <div class="space-y-6">
                             <div class="grid md:grid-cols-2 gap-6">
+                                <div class="md:col-span-2">
+                                    <label class="block text-sm font-semibold mb-2 text-slate-700">Number of Owners <span class="text-red-500">*</span></label>
+                                    <input type="number" id="numOwners" min="1" max="100" value="1"
+                                        class="w-full bg-white border border-brand-green/20 rounded-xl px-4 py-3.5 focus:border-brand-green outline-none transition-all placeholder:text-slate-300 font-medium text-slate-800 focus:ring-2 focus:ring-brand-green/10">
+                                </div>
+
                                 <div>
                                     <label class="block text-sm font-semibold mb-2 text-slate-700">State <span class="text-red-500">*</span></label>
-                                    <input type="text" id="state" placeholder="State name"
-                                        class="w-full bg-white border border-brand-green/20 rounded-xl px-4 py-3.5 focus:border-brand-green outline-none transition-all placeholder:text-slate-300 font-medium text-slate-800 focus:ring-2 focus:ring-brand-green/10">
-                                    <p class="text-xs text-red-500 mt-1 hidden" id="err-state">Please enter the state.</p>
+                                    <select id="state"
+                                        class="w-full bg-white border border-brand-green/20 rounded-xl px-4 py-3.5 focus:border-brand-green outline-none transition-all font-medium text-slate-800 focus:ring-2 focus:ring-brand-green/10">
+                                        <option value="">Select State</option>
+                                    </select>
+                                    <p class="text-xs text-red-500 mt-1 hidden" id="err-state">Please select a state.</p>
                                 </div>
 
                                 <div>
                                     <label class="block text-sm font-semibold mb-2 text-slate-700">District <span class="text-red-500">*</span></label>
-                                    <input type="text" id="district" placeholder="District name"
-                                        class="w-full bg-white border border-brand-green/20 rounded-xl px-4 py-3.5 focus:border-brand-green outline-none transition-all placeholder:text-slate-300 font-medium text-slate-800 focus:ring-2 focus:ring-brand-green/10">
-                                    <p class="text-xs text-red-500 mt-1 hidden" id="err-district">Please enter the district.</p>
+                                    <select id="district"
+                                        class="w-full bg-white border border-brand-green/20 rounded-xl px-4 py-3.5 focus:border-brand-green outline-none transition-all font-medium text-slate-800 focus:ring-2 focus:ring-brand-green/10" disabled>
+                                        <option value="">Select District</option>
+                                    </select>
+                                    <p class="text-xs text-red-500 mt-1 hidden" id="err-district">Please select a district.</p>
                                 </div>
 
                                 <div>
@@ -908,11 +922,12 @@
                 validateForm();
             });
 
-            // Text fields
+            // Input and select fields
             const textFields = ['fullName', 'mobileNumber', 'email', 'completeAddress', 'state', 'district', 'tehsil', 'village', 'khataNumber', 'khasraNumber', 'landArea'];
             textFields.forEach(id => {
                 const field = document.getElementById(id);
-                field.addEventListener('input', () => {
+                const eventType = (field.tagName === 'SELECT') ? 'change' : 'input';
+                field.addEventListener(eventType, () => {
                     validateField(id);
                     validateForm();
                 });
@@ -1365,6 +1380,14 @@
         function resetForm() {
             // Reset Text Inputs
             document.getElementById('land-verification-form').reset();
+
+            // Reset district dropdown
+            const districtSelect = document.getElementById('district');
+            if (districtSelect) {
+                districtSelect.innerHTML = '<option value="">Select District</option>';
+                districtSelect.disabled = true;
+            }
+            toggleCoOwnerNoc();
             
             // Delete all uploaded files
             documentTypes.forEach(type => deleteFile(type));

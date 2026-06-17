@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About & Renewable Energy | Kdia Re Park</title>
+    <!-- Preconnect & Fonts Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preload Logo -->
+    <link rel="preload" as="image" href="assets/images/logo.webp">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -20,13 +28,13 @@
         }
     </script>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
     
     <!-- Language Switcher -->
-    <script src="assets/js/translate.js"></script>
+    <script src="assets/js/translate.js" defer></script>
 </head>
 
 <body class="bg-white text-slate-900 selection:bg-brand-green/30">
@@ -34,7 +42,7 @@
     <nav class="fixed w-full z-50 py-8 transition-all duration-500">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-3">
-                <img src="assets/images/logo.png" alt="KDIA RE PARK" class="h-10 w-auto">
+                <img src="assets/images/logo.webp" alt="KDIA RE PARK" class="h-10 w-auto" width="150" height="40">
             </a>
             <div class="hidden md:flex items-center space-x-12 text-slate-600 font-medium">
                 <a href="index.html" class="hover:text-brand-green transition-colors">Home</a>
@@ -120,8 +128,8 @@
                     </p>
                 </div>
                 <div class="reveal rounded-3xl overflow-hidden shadow-2xl" style="transition-delay: 300ms">
-                    <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=80&w=2072&auto=format&fit=crop"
-                        alt="Solar Farm" class="w-full h-[500px] object-cover">
+                    <img src="assets/images/solar4_opt.webp"
+                        alt="Solar Farm" class="w-full h-[500px] object-cover" width="1200" height="500" loading="lazy">
                 </div>
             </div>
         </div>
@@ -151,8 +159,8 @@
                     <div
                         class="glass-card aspect-video rounded-3xl flex items-center justify-center p-0 border border-slate-100 relative z-10 overflow-hidden">
                         <div class="absolute inset-0 brand-gradient-bg opacity-5"></div>
-                        <img src="https://wepitch.uk/kdia/assets/images/solar4.jpeg" alt="Kdia Re Park Logo"
-                            class=" h-auto  ">
+                        <img src="assets/images/solar4.webp" alt="Kdia Re Park Logo"
+                            class="h-auto" width="600" height="400" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -663,7 +671,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/scripts.js" defer></script>
 </body>
 
 </html>

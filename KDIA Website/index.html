@@ -7,6 +7,14 @@
     <title>Kdia Re Park | Sustainable Solar Solutions</title>
     <meta name="description" content="Sustainable, clean, and futuristic solar energy infrastructure by Kdia Re Park.">
 
+    <!-- Preconnect & Fonts Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preload Logo -->
+    <link rel="preload" as="image" href="assets/images/logo.webp">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -33,13 +41,13 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 
     <!-- CDNs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
     
     <!-- Language Switcher -->
-    <script src="assets/js/translate.js"></script>
+    <script src="assets/js/translate.js" defer></script>
 </head>
 
 <body class="bg-white text-slate-900 selection:bg-brand-green/30">
@@ -48,7 +56,7 @@
     <nav class="fixed w-full z-50 py-8 transition-all duration-500">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-3">
-                <img src="assets/images/logo.png" alt="KDIA RE PARK" class="h-10 w-auto">
+                <img src="assets/images/logo.webp" alt="KDIA RE PARK" class="h-10 w-auto" width="150" height="40">
             </a>
             <div class="hidden md:flex items-center space-x-12 text-slate-600 font-medium">
                 <a href="index.html" class="text-brand-green">Home</a>
@@ -165,8 +173,8 @@
 
     <!-- Visual Break Secton -->
     <section class="h-[600px] relative overflow-hidden reveal mt-10">
-        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2070&auto=format&fit=crop"
-            alt="Solar Infrastructure" class="w-full h-full object-cover">
+        <img src="assets/images/solar1_opt.webp"
+            alt="Solar Infrastructure" class="w-full h-full object-cover" width="1200" height="600" loading="lazy">
         <div class="absolute inset-0 bg-brand-green/10 mix-blend-multiply"></div>
         <div class="absolute inset-0 flex items-center justify-center text-center px-6">
             <h2 class="text-4xl md:text-6xl font-display font-bold text-white drop-shadow-2xl max-w-4xl">
@@ -204,9 +212,9 @@
                 </div>
                 <div class="reveal rounded-3xl overflow-hidden shadow-2xl relative group"
                     style="transition-delay: 200ms">
-                    <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=2072&auto=format&fit=crop"
+                    <img src="assets/images/solar2_opt.webp"
                         alt="Solar Panels"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" width="1200" height="800" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 </div>
             </div>
@@ -251,9 +259,9 @@
             <div class="grid lg:grid-cols-2 gap-20 items-center mb-32">
                 <div class="reveal rounded-3xl overflow-hidden shadow-2xl relative group order-2 lg:order-1"
                     style="transition-delay: 200ms">
-                    <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=2072&auto=format&fit=crop"
+                    <img src="assets/images/solar3_opt.webp"
                         alt="EV Charging Station"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" width="1200" height="800" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 </div>
                 <div class="reveal order-1 lg:order-2">
@@ -388,8 +396,8 @@
     <!-- Minimal Footer -->
     <footer class="py-20 bg-white border-t border-slate-50">
         <div class="container mx-auto px-6 text-center">
-            <img src="assets/images/logo.png" alt="Kdia Re Park Logo"
-                class="h-10 w-auto mx-auto mb-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all">
+            <img src="assets/images/logo.webp" alt="Kdia Re Park Logo"
+                class="h-10 w-auto mx-auto mb-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all" width="150" height="40" loading="lazy">
             <div class="flex justify-center space-x-12 mb-10 text-slate-400 font-medium">
                 <a href="about.html" class="hover:text-brand-green transition-colors">Company & Energy Solutions</a>
                 <a href="contact.html" class="hover:text-brand-green transition-colors">Contact</a>
@@ -643,7 +651,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/scripts.js" defer></script>
 </body>
 
 </html>

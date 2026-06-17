@@ -135,7 +135,7 @@ h6 {
     font-weight: 700;
     cursor: pointer;
     box-shadow: 0 10px 30px rgba(141, 198, 63, 0.4);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .chat-fab:hover {
@@ -159,7 +159,7 @@ h6 {
     transform: translateY(20px);
     opacity: 0;
     pointer-events: none;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .chat-panel.active {
@@ -413,7 +413,7 @@ select {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: color 0.3s;
+    transition: color 0.15s;
 }
 
 .faq-question:hover {
@@ -423,7 +423,7 @@ select {
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease;
+    transition: max-height 0.25s ease;
 }
 
 .faq-answer.active {
@@ -432,7 +432,7 @@ select {
 }
 
 .faq-icon {
-    transition: transform 0.3s;
+    transition: transform 0.15s;
 }
 
 .faq-icon.active {
@@ -456,7 +456,7 @@ select {
 /* Lazy Loading */
 img[loading="lazy"] {
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.2s;
 }
 
 img[loading="lazy"].loaded {
@@ -499,7 +499,7 @@ img[loading="lazy"].loaded {
     flex-direction: column;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
     transform: scale(0.9) translateY(20px);
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .modal-overlay.active .modal-container {
@@ -525,7 +525,7 @@ img[loading="lazy"].loaded {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.15s;
     color: #64748b;
 }
 

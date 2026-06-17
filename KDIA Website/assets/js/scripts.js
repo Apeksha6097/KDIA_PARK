@@ -49,18 +49,52 @@ const govtDocuments = [
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Global Image Loader, Fade-in & Fallback Handler
+    const handleImageError = (img) => {
+        console.error(`Image load failed: ${img.src}`);
+        img.classList.add('error');
+        img.classList.remove('loaded');
+        // SVG placeholder fallback
+        img.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="100%" height="100%" fill="%23f1f5f9"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="24" fill="%2394a3b8" font-weight="bold">KDIA RE PARK</text></svg>';
+    };
+
+    const auditImages = () => {
+        document.querySelectorAll('img').forEach(img => {
+            if (img.complete) {
+                if (img.naturalWidth === 0) {
+                    handleImageError(img);
+                } else {
+                    img.classList.add('loaded');
+                }
+            } else {
+                img.addEventListener('load', () => {
+                    img.classList.add('loaded');
+                });
+                img.addEventListener('error', () => {
+                    handleImageError(img);
+                });
+            }
+        });
+    };
+    auditImages();
+
     // Navbar Scroll Effect
     const nav = document.querySelector('nav');
     if (nav) {
+        let isScrolled = false;
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                nav.classList.add('py-4', 'shadow-sm', 'bg-white/95', 'backdrop-blur-md');
-                nav.classList.remove('py-8');
-            } else {
-                nav.classList.add('py-8');
-                nav.classList.remove('py-4', 'shadow-sm', 'bg-white/95', 'backdrop-blur-md');
+            const shouldScroll = window.scrollY > 50;
+            if (shouldScroll !== isScrolled) {
+                isScrolled = shouldScroll;
+                if (isScrolled) {
+                    nav.classList.add('py-4', 'shadow-sm', 'bg-white/95', 'backdrop-blur-md');
+                    nav.classList.remove('py-8');
+                } else {
+                    nav.classList.add('py-8');
+                    nav.classList.remove('py-4', 'shadow-sm', 'bg-white/95', 'backdrop-blur-md');
+                }
             }
-        });
+        }, { passive: true });
     }
 
     // Mobile Menu Toggle

@@ -1,3 +1,4 @@
+<?php header("Content-Type: application/javascript"); ?>
 // Scheme-Based Calculator Logic
 // Supports Self Finance and RESCO (Renewable Energy Service Company) modes
 

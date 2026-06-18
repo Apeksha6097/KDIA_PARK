@@ -1,3 +1,4 @@
+<?php header('Content-Type: application/javascript'); ?>
 /**
  * KDIA Website Translation Service using Devnagri Translation API
  */
@@ -271,7 +272,7 @@
                 showLoading(true);
                 const missingArray = Array.from(missingTextsSet);
 
-                fetch('/api/translate', {
+                fetch('api/translate.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

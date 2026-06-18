@@ -1,4 +1,5 @@
-/* assets/js/scripts.js */
+<?php header("Content-Type: application/javascript"); ?>
+/* assets/js/scripts.php */
 
 // ========================================
 // SEED DATA FOR GOVT. SCHEMES & POLICIES
@@ -497,7 +498,7 @@ const ApplicationModal = {
 document.querySelectorAll('a[href*="#"]').forEach(link => {
     link.addEventListener('click', (e) => {
         const url = new URL(link.href, window.location.origin);
-        if (url.pathname === window.location.pathname || url.pathname.endsWith('index.html')) {
+        if (url.pathname === window.location.pathname || url.pathname.endsWith('index.php')) {
             const hash = url.hash.substring(1);
             if (hash.startsWith('govt-')) {
                 const cat = hash.replace('govt-schemes-', '');

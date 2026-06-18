@@ -1,3 +1,4 @@
+<?php header('Content-Type: application/javascript'); ?>
 document.addEventListener('DOMContentLoaded', () => {
   const registerForm = document.getElementById('registerForm');
   const loginForm = document.getElementById('loginForm');
@@ -33,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return showToast('Password must be at least 8 characters.', 'error');
       }
       try {
-        const res = await fetch('/api/auth/register', {
+        const res = await fetch('../../api/auth/register.php', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)
@@ -41,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const json = await res.json();
         if (res.ok) {
           showToast('Registration successful! Redirecting to login...', 'success');
-          setTimeout(() => window.location.href = 'login.html', 1500);
+          setTimeout(() => window.location.href = 'login.php', 1500);
         } else {
           showToast(json.message || 'Registration failed.', 'error');
         }
@@ -57,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const data = Object.fromEntries(new FormData(loginForm));
       try {
-        const res = await fetch('/api/auth/login', {
+        const res = await fetch('../../api/auth/login.php', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)
@@ -66,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (res.ok) {
           localStorage.setItem('token', json.token);
           localStorage.setItem('user', JSON.stringify(json.user));
-          window.location.href = 'dashboard.html';
+          window.location.href = 'dashboard.php';
         } else {
           showToast(json.message || 'Login failed.', 'error');
         }

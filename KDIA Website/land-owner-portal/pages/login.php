@@ -23,9 +23,9 @@
       </div>
       <button type="submit" class="btn">Login</button>
       <p><a href="#" id="forgotPassword">Forgot Password?</a></p>
-      <p>Don't have an account? <a href="register.html">Register</a></p>
+      <p>Don't have an account? <a href="register.php">Register</a></p>
     </form>
   </div>
-  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/auth.php?v=1.0.1"></script>
 </body>
 </html>

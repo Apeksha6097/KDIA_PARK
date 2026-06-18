@@ -25,7 +25,7 @@
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <!-- Language Switcher -->
-    <script src="assets/js/translate.js" defer></script>
+    <script src="assets/js/translate.php?v=1.0.1" defer></script>
 </head>
 
 <body class="bg-white text-slate-900 selection:bg-brand-green/30">
@@ -33,36 +33,36 @@
     <!-- Navigation -->
     <nav class="fixed w-full z-50 py-8 transition-all duration-500">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-3">
+            <a href="index.php" class="flex items-center space-x-3">
                 <img src="assets/images/logo.webp" alt="KDIA RE PARK" class="h-10 w-auto" width="150" height="40">
             </a>
             <div class="hidden md:flex items-center space-x-12 text-slate-600 font-medium">
-                <a href="index.html" class="hover:text-brand-green transition-colors">Home</a>
-                <a href="about.html" class="hover:text-brand-green transition-colors">Company & Energy Solutions</a>
+                <a href="index.php" class="hover:text-brand-green transition-colors">Home</a>
+                <a href="about.php" class="hover:text-brand-green transition-colors">Company & Energy Solutions</a>
 
                 <!-- Govt. Schemes & Policies Dropdown -->
                 <div class="relative group">
-                    <a href="govt-schemes.html"
+                    <a href="govt-schemes.php"
                         class="flex items-center space-x-1 hover:text-brand-green transition-colors">
                         <span>Govt. Schemes & Policies</span>
                         <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
                     </a>
                     <div
                         class="absolute left-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-slate-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 py-2 z-50">
-                        <a href="govt-schemes.html#policies"
+                        <a href="govt-schemes.php#policies"
                             class="block px-6 py-3 text-slate-600 hover:text-brand-green hover:bg-slate-50 transition-colors">Policies</a>
-                        <a href="govt-schemes.html#schemes"
+                        <a href="govt-schemes.php#schemes"
                             class="block px-6 py-3 text-slate-600 hover:text-brand-green hover:bg-slate-50 transition-colors">Schemes</a>
-                        <a href="govt-schemes.html#guidelines"
+                        <a href="govt-schemes.php#guidelines"
                             class="block px-6 py-3 text-slate-600 hover:text-brand-green hover:bg-slate-50 transition-colors">Guidelines</a>
-                        <a href="govt-schemes.html#tariff-orders"
+                        <a href="govt-schemes.php#tariff-orders"
                             class="block px-6 py-3 text-slate-600 hover:text-brand-green hover:bg-slate-50 transition-colors">Tariff
                             Orders</a>
                     </div>
                 </div>
 
                 <!-- Re-Culator Link (Highlighted & Active) -->
-                <a href="re-culator.html"
+                <a href="re-culator.php"
                     class="flex items-center space-x-2 text-brand-green font-bold transition-colors relative group">
                     <span class="relative">
                         Re-Culator
@@ -72,7 +72,7 @@
                     <i data-lucide="plus-circle" class="w-4 h-4"></i>
                 </a>
 
-                <a href="contact.html" class="hover:text-brand-green transition-colors">Contact Us</a>
+                <a href="contact.php" class="hover:text-brand-green transition-colors">Contact Us</a>
             </div>
 
             <div class="flex items-center space-x-4">
@@ -91,11 +91,11 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu"
             class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b border-brand-green/10 py-6 px-6 flex flex-col space-y-4 shadow-xl">
-            <a href="index.html" class="text-lg">Home</a>
-            <a href="about.html" class="text-lg">Company & Energy Solutions</a>
-            <a href="govt-schemes.html" class="text-lg">Govt. Schemes & Policies</a>
-            <a href="re-culator.html" class="text-lg font-bold text-brand-green">Re-Culator +</a>
-            <a href="contact.html" class="text-lg text-brand-green font-bold">Contact Us</a>
+            <a href="index.php" class="text-lg">Home</a>
+            <a href="about.php" class="text-lg">Company & Energy Solutions</a>
+            <a href="govt-schemes.php" class="text-lg">Govt. Schemes & Policies</a>
+            <a href="re-culator.php" class="text-lg font-bold text-brand-green">Re-Culator +</a>
+            <a href="contact.php" class="text-lg text-brand-green font-bold">Contact Us</a>
         </div>
     </nav>
 
@@ -259,13 +259,13 @@
                 <div>
                     <h4 class="font-bold text-slate-900 mb-6 font-display">Quick Links</h4>
                     <ul class="space-y-3 text-slate-500 font-light">
-                        <li><a href="index.html" class="hover:text-brand-green transition-colors">Home</a></li>
-                        <li><a href="about.html" class="hover:text-brand-green transition-colors">About Us</a></li>
-                        <li><a href="govt-schemes.html" class="hover:text-brand-green transition-colors">Govt.
+                        <li><a href="index.php" class="hover:text-brand-green transition-colors">Home</a></li>
+                        <li><a href="about.php" class="hover:text-brand-green transition-colors">About Us</a></li>
+                        <li><a href="govt-schemes.php" class="hover:text-brand-green transition-colors">Govt.
                                 Schemes</a></li>
-                        <li><a href="re-culator.html" class="hover:text-brand-green transition-colors">Re-Culator</a>
+                        <li><a href="re-culator.php" class="hover:text-brand-green transition-colors">Re-Culator</a>
                         </li>
-                        <li><a href="contact.html" class="hover:text-brand-green transition-colors">Contact</a></li>
+                        <li><a href="contact.php" class="hover:text-brand-green transition-colors">Contact</a></li>
                     </ul>
                 </div>
                 <div>
@@ -324,8 +324,8 @@
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/scripts.js"></script>
-    <script src="assets/js/scheme-calculator.js"></script>
+    <script src="assets/js/scripts.php"></script>
+    <script src="assets/js/scheme-calculator.php"></script>
     <script>
         // Calculator card interaction
         async function showCalculator(type) {
@@ -418,7 +418,7 @@
 
             try {
                 // Fetch the standalone component
-                const response = await fetch('assets/components/savings-calculator.html');
+                const response = await fetch('assets/components/savings-calculator.php');
                 if (!response.ok) {
                     throw new Error(`Failed to load component: ${response.status} ${response.statusText}`);
                 }
@@ -433,7 +433,7 @@
                     console.warn('Lucide icons library not found');
                 }
 
-                // Reinitialize calculator logic from scripts.js
+                // Reinitialize calculator logic from scripts.php
                 if (typeof initSavingsCalculator === 'function') {
                     console.log('Initializing calculator logic...');
                     initSavingsCalculator();
@@ -445,7 +445,7 @@
                         monthlyBillInput.dispatchEvent(event);
                     }
                 } else {
-                    console.error('initSavingsCalculator function not found in scripts.js');
+                    console.error('initSavingsCalculator function not found in scripts.php');
                 }
             } catch (error) {
                 console.error('Fatal error in loadSavingsCalculator:', error);
@@ -456,7 +456,7 @@
         async function loadSchemeCalculator() {
             const container = document.getElementById('scheme-calculator-container');
             try {
-                const response = await fetch('assets/components/scheme-calculator.html');
+                const response = await fetch('assets/components/scheme-calculator.php');
                 if (!response.ok) throw new Error('Failed to load scheme component');
                 const html = await response.text();
                 container.innerHTML = html;
@@ -477,7 +477,7 @@
         async function loadEvCalculator() {
             const container = document.getElementById('ev-calculator-container');
             try {
-                const response = await fetch('assets/components/ev-calculator.html');
+                const response = await fetch('assets/components/ev-calculator.php');
                 if (!response.ok) throw new Error('Failed to load EV calculator component');
                 const html = await response.text();
                 container.innerHTML = html;

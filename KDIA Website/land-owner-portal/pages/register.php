@@ -28,9 +28,9 @@
         <input type="password" name="confirmPassword" required />
       </label>
       <button type="submit" class="btn">Register</button>
-      <p>Already have an account? <a href="login.html">Login instead</a></p>
+      <p>Already have an account? <a href="login.php">Login instead</a></p>
     </form>
   </div>
-  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/auth.php?v=1.0.1"></script>
 </body>
 </html>

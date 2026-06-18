@@ -11,8 +11,8 @@ app.use(express.urlencoded({ extended: true }));
 // Serve static assets for the portal
 app.use('/land-owner-portal', express.static(path.join(__dirname, 'land-owner-portal')));
 
-// Serve root static assets (index.html, about.html, etc.)
-app.use(express.static(path.join(__dirname, '.')));
+// Serve root static assets (index.html, about.html, etc.) and support extensionless routes
+app.use(express.static(path.join(__dirname, '.'), { extensions: ['html'] }));
 
 // API routes (placeholder modules)
 app.use('/api/auth', require('./land-owner-portal/api/auth'));

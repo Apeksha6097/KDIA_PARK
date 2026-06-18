@@ -418,7 +418,7 @@
 
             try {
                 // Fetch the standalone component
-                const response = await fetch('assets/components/savings-calculator.php');
+                const response = await fetch('components/savings-calculator.php');
                 if (!response.ok) {
                     throw new Error(`Failed to load component: ${response.status} ${response.statusText}`);
                 }
@@ -456,7 +456,7 @@
         async function loadSchemeCalculator() {
             const container = document.getElementById('scheme-calculator-container');
             try {
-                const response = await fetch('assets/components/scheme-calculator.php');
+                const response = await fetch('components/scheme-calculator.php');
                 if (!response.ok) throw new Error('Failed to load scheme component');
                 const html = await response.text();
                 container.innerHTML = html;
@@ -477,7 +477,7 @@
         async function loadEvCalculator() {
             const container = document.getElementById('ev-calculator-container');
             try {
-                const response = await fetch('assets/components/ev-calculator.php');
+                const response = await fetch('components/ev-calculator.php');
                 if (!response.ok) throw new Error('Failed to load EV calculator component');
                 const html = await response.text();
                 container.innerHTML = html;

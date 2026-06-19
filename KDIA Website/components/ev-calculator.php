@@ -108,9 +108,9 @@
         </div>
 
         <!-- Right Side KPI Dashboard -->
-        <div class="lg:col-span-5 flex flex-col justify-start">
+        <div class="lg:col-span-5 flex flex-col justify-center space-y-4">
             <!-- 2x2 KPI Cards Grid -->
-            <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="grid grid-cols-2 gap-4">
                 <!-- Total Project Cost -->
                 <div class="bg-gradient-to-br from-emerald-900 via-emerald-800 to-teal-950 text-white rounded-2xl p-4 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col space-y-1 group border border-emerald-800/30">
                     <div class="flex justify-between items-center">
@@ -161,32 +161,33 @@
             </div>
 
             <!-- Interest Information Block -->
-            <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm mb-5">
-                <div class="grid grid-cols-3 gap-2 text-center divide-x divide-slate-100">
-                    <div class="flex flex-col items-center justify-center px-1">
-                        <span class="flex items-center text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">
-                            Interest
-                        </span>
-                        <span class="text-sm font-bold text-slate-700">9%</span>
-                    </div>
-                    <div class="flex flex-col items-center justify-center px-1">
-                        <span class="flex items-center text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">
-                            Loan Term
-                        </span>
-                        <span class="text-sm font-bold text-slate-700">8 Years</span>
-                    </div>
-                    <div class="flex flex-col items-center justify-center px-1">
-                        <span class="flex items-center text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">
-                            Loan Percentage
-                        </span>
-                        <span class="text-sm font-bold text-slate-700">80%</span>
-                    </div>
+            <div class="bg-white border border-[#E5E7EB] shadow-sm h-[70px] w-full flex items-center justify-between" style="border-radius: 16px; padding: 8px 0;">
+                <!-- Interest -->
+                <div class="flex-1 flex flex-col items-center justify-center h-full border-r border-[#EAECEF] px-2" style="gap: 3px;">
+                    <span class="uppercase" style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #A0AEC0;">
+                        Interest
+                    </span>
+                    <span style="font-size: 16px; font-weight: 700; color: #243B5A; line-height: 1.1;">9%</span>
+                </div>
+                <!-- Loan Term -->
+                <div class="flex-1 flex flex-col items-center justify-center h-full border-r border-[#EAECEF] px-2" style="gap: 3px;">
+                    <span class="uppercase" style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #A0AEC0;">
+                        Loan Term
+                    </span>
+                    <span style="font-size: 16px; font-weight: 700; color: #243B5A; line-height: 1.1;">8 Years</span>
+                </div>
+                <!-- Loan Percentage -->
+                <div class="flex-1 flex flex-col items-center justify-center h-full px-2" style="gap: 3px;">
+                    <span class="uppercase" style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #A0AEC0;">
+                        Loan Percentage
+                    </span>
+                    <span style="font-size: 16px; font-weight: 700; color: #243B5A; line-height: 1.1;">80%</span>
                 </div>
             </div>
 
-            <p class="text-[10px] text-slate-400 italic text-center leading-relaxed mt-3">
-                *All values are indicative estimates. Actual profits depend on operational factors,
-                electricity costs, and local market conditions.
+            <!-- Disclaimer Paragraph -->
+            <p class="text-[10px] text-slate-400 italic text-center leading-relaxed max-w-[90%] mx-auto pt-1">
+                *All values are indicative estimates. Actual profits depend on operational factors, electricity costs, and local market conditions.
             </p>
         </div>
     </div>

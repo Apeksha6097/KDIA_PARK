@@ -237,7 +237,7 @@
                 </div>
 
                 <!-- EV Calculator Container (shown on card click) -->
-                <div id="ev-calculator-container" class="hidden border-t border-slate-100 pt-12">
+                <div id="ev-calculator-container" class="hidden border-t border-slate-100 pt-6">
                     <!-- EV Calculator will be loaded here on demand -->
                 </div>
 
@@ -493,12 +493,12 @@
         }
 
         function initEvCalculator() {
-            // Mapping Charger Capacity to { stations, area }
+            // Mapping Charger Capacity to { stations, area, cost }
             const CAPACITY_DATA = { 
-                '60': { stations: 1, area: 500 },
-                '120': { stations: 2, area: 1000 },
-                '160': { stations: 3, area: 1500 },
-                '200': { stations: 4, area: 2000 }
+                '60': { stations: 1, area: 500, cost: 1010000 },
+                '120': { stations: 2, area: 1000, cost: 2020000 },
+                '160': { stations: 3, area: 1500, cost: 2693333 },
+                '200': { stations: 4, area: 2000, cost: 3366667 }
             };
             
             // Profit per unit is always fixed at ₹10
@@ -515,8 +515,15 @@
             const monthlyEl = document.getElementById('ev-monthly-profit');
             const yearlyEl = document.getElementById('ev-yearly-profit');
 
+            // KPI Dashboard elements
+            const costDisplay = document.getElementById('ev-project-cost-display');
+            const capacitySubtitle = document.getElementById('ev-charger-capacity-subtitle');
+            const loanDisplay = document.getElementById('ev-loan-availed-display');
+            const equityDisplay = document.getElementById('ev-equity-invested-display');
+            const roiDisplay = document.getElementById('ev-roi-display');
+
             function formatINR(amount) {
-                return '₹' + amount.toLocaleString('en-IN', { maximumFractionDigits: 2 });
+                return '₹ ' + Math.round(amount).toLocaleString('en-IN', { maximumFractionDigits: 0 });
             }
 
             function animateResult(el) {
@@ -528,7 +535,7 @@
             function validateUnits() {
                 if (!unitsEl) return false;
                 const val = parseFloat(unitsEl.value);
-                if (!val || val <= 0) {
+                if (isNaN(val) || val <= 0) {
                     unitsEl.classList.add('border-red-400');
                     unitsEl.classList.remove('border-slate-200');
                     if (errorEl) errorEl.classList.remove('hidden');
@@ -552,9 +559,42 @@
                         animateResult(stationsDisplay);
                         setTimeout(() => { stationsDisplay.textContent = data.stations; }, 80);
                     }
-                    if (areaDisplay.textContent !== data.area.toString()) {
+                    if (areaDisplay.textContent !== data.area.toLocaleString('en-IN')) {
                         animateResult(areaDisplay);
-                        setTimeout(() => { areaDisplay.textContent = data.area; }, 80);
+                        setTimeout(() => { areaDisplay.textContent = data.area.toLocaleString('en-IN'); }, 80);
+                    }
+                }
+
+                // Update Project Cost, Loan, and Equity (80% / 20%)
+                const cost = data.cost;
+                const loan = cost * 0.8;
+                const equity = cost * 0.2;
+
+                if (costDisplay) {
+                    const formattedCost = formatINR(cost);
+                    if (costDisplay.textContent !== formattedCost) {
+                        animateResult(costDisplay);
+                        setTimeout(() => { costDisplay.textContent = formattedCost; }, 80);
+                    }
+                }
+
+                if (capacitySubtitle) {
+                    capacitySubtitle.textContent = `${capacity} kW Charger`;
+                }
+
+                if (loanDisplay) {
+                    const formattedLoan = formatINR(loan);
+                    if (loanDisplay.textContent !== formattedLoan) {
+                        animateResult(loanDisplay);
+                        setTimeout(() => { loanDisplay.textContent = formattedLoan; }, 80);
+                    }
+                }
+
+                if (equityDisplay) {
+                    const formattedEquity = formatINR(equity);
+                    if (equityDisplay.textContent !== formattedEquity) {
+                        animateResult(equityDisplay);
+                        setTimeout(() => { equityDisplay.textContent = formattedEquity; }, 80);
                     }
                 }
 
@@ -576,6 +616,16 @@
                     if (monthlyEl) monthlyEl.textContent = formatINR(monthly);
                     if (yearlyEl)  yearlyEl.textContent  = formatINR(yearly);
                 }, 80);
+
+                // ROI Calculation: (Yearly Profit / Equity Invested) * 100
+                const roi = equity > 0 ? Math.round((yearly / equity) * 100) : 0;
+                if (roiDisplay) {
+                    const formattedRoi = `${roi}%`;
+                    if (roiDisplay.textContent !== formattedRoi) {
+                        animateResult(roiDisplay);
+                        setTimeout(() => { roiDisplay.textContent = formattedRoi; }, 80);
+                    }
+                }
             }
 
             if (capacityEl) capacityEl.addEventListener('change', updateCalculations);

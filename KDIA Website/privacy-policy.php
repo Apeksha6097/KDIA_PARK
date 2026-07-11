@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Govt. Schemes & Policies | KDIA Re Park</title>
+    <title>Privacy Policy | Kdia Re Park</title>
     <!-- Preconnect & Fonts Preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +30,6 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js" defer></script>
     <script src="https://unpkg.com/lucide@latest" defer></script>
     
     <!-- Language Switcher -->
@@ -39,7 +38,6 @@
 
 <body class="bg-white text-slate-900 selection:bg-brand-green/30">
 
-    <!-- Navigation -->
     <nav class="fixed w-full z-50 py-8 transition-all duration-500">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <a href="index.php" class="flex items-center space-x-3">
@@ -51,7 +49,8 @@
 
                 <!-- Govt. Schemes & Policies Dropdown -->
                 <div class="relative group">
-                    <a href="govt-schemes.php" class="flex items-center space-x-1 text-brand-green transition-colors">
+                    <a href="govt-schemes.php"
+                        class="flex items-center space-x-1 hover:text-brand-green transition-colors">
                         <span>Govt. Schemes & Policies</span>
                         <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
                     </a>
@@ -69,9 +68,9 @@
                     </div>
                 </div>
 
-                <!-- Re-Culator Link (Highlighted) -->
+                <!-- Re-Culator Link -->
                 <a href="re-culator.php"
-                    class="flex items-center space-x-2 text-brand-green font-bold transition-colors relative group">
+                    class="flex items-center space-x-2 hover:text-brand-green transition-colors relative group">
                     <span class="relative">
                         Re-Culator
                         <span
@@ -106,68 +105,102 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-64 pb-32 relative bg-gradient-to-br from-slate-50 to-white">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center mb-16">
-                <h1 class="text-6xl font-display font-bold mb-6 reveal text-slate-900">
-                    Govt. <span class="text-brand-green">Schemes & Policies</span>
-                </h1>
-                <p class="text-xl text-slate-600 font-normal reveal">
-                    Official policies, schemes, guidelines, and tariff orders relevant to KDIA RE Park.
+    <!-- Main Content Section -->
+    <section class="pt-48 pb-32 relative bg-gradient-to-br from-slate-50 to-white">
+        <div class="container mx-auto px-6 relative z-10 max-w-4xl">
+            <div class="reveal">
+                <span class="text-brand-green font-bold uppercase tracking-wider text-sm">Legal & Compliance</span>
+                <h1 class="text-5xl md:text-6xl font-display font-bold text-slate-900 mt-2 mb-8">Privacy Policy</h1>
+                <p class="text-xl text-slate-600 font-light leading-relaxed mb-12">
+                    Your privacy is important to us. This Privacy Policy details how KDIA RE Park collects, uses, and safeguards your information in connection with our clean energy platform and website operations.
                 </p>
             </div>
+
+            <div class="space-y-10 reveal" style="transition-delay: 150ms">
+                <!-- Section 1 -->
+                <div>
+                    <h3 class="text-2xl font-bold font-display text-slate-900 mb-4">1. Information We Collect</h3>
+                    <p class="text-slate-500 font-light leading-relaxed">
+                        KDIA RE Park may collect personal information such as your name, email address, phone number, physical address, property details, land details, and any other information submitted through forms on our website.
+                    </p>
+                </div>
+
+                <!-- Section 2 -->
+                <div>
+                    <h3 class="text-2xl font-bold font-display text-slate-900 mb-4">2. How We Use Your Information</h3>
+                    <p class="text-slate-500 font-light leading-relaxed">
+                        Collected information may be used to process user inquiries, solar subscription applications, EV station requirements, land verification requests, and to improve overall website services and functionality.
+                    </p>
+                </div>
+
+                <!-- Section 3 -->
+                <div>
+                    <h3 class="text-2xl font-bold font-display text-slate-900 mb-4">3. Information Sharing</h3>
+                    <p class="text-slate-500 font-light leading-relaxed">
+                        Personal information is not sold or traded. It may only be shared with authorized service providers or partners when strictly required for service delivery and operational execution.
+                    </p>
+                </div>
+
+                <!-- Section 4 -->
+                <div>
+                    <h3 class="text-2xl font-bold font-display text-slate-900 mb-4">4. Data Security</h3>
+                    <p class="text-slate-500 font-light leading-relaxed">
+                        Reasonable technical and organizational security measures are implemented to protect user information from unauthorized access, misuse, loss, or alteration.
+                    </p>
+                </div>
+
+                <!-- Section 5 -->
+                <div>
+                    <h3 class="text-2xl font-bold font-display text-slate-900 mb-4">5. Data Storage and Retention</h3>
+                    <p class="text-slate-500 font-light leading-relaxed">
+                        User information may be retained only for as long as required for business operations, service delivery, and compliance with applicable legal requirements.
+                    </p>
+                </div>
+
+                <!-- Section 6 -->
+                <div>
+                    <h3 class="text-2xl font-bold font-display text-slate-900 mb-4">6. Cookies and Website Technologies</h3>
+                    <p class="text-slate-500 font-light leading-relaxed">
+                        The website may use cookies or similar technologies to improve website performance, understand user interaction, and enhance the overall user experience.
+                    </p>
+                </div>
+
+                <!-- Section 7 -->
+                <div>
+                    <h3 class="text-2xl font-bold font-display text-slate-900 mb-4">7. Third-Party Services</h3>
+                    <p class="text-slate-500 font-light leading-relaxed">
+                        Some website features may use third-party services. KDIA RE Park is not responsible for the privacy practices, content, or terms of external websites or services.
+                    </p>
+                </div>
+
+                <!-- Section 8 -->
+                <div>
+                    <h3 class="text-2xl font-bold font-display text-slate-900 mb-4">8. User Rights</h3>
+                    <p class="text-slate-500 font-light leading-relaxed">
+                        Users may request access, correction, or deletion of their personal information by contacting KDIA RE Park through the designated support channels.
+                    </p>
+                </div>
+
+                <!-- Section 9 -->
+                <div>
+                    <h3 class="text-2xl font-bold font-display text-slate-900 mb-4">9. Changes to the Privacy Policy</h3>
+                    <p class="text-slate-500 font-light leading-relaxed">
+                        KDIA RE Park may update the Privacy Policy when required. Users are encouraged to review this page periodically to stay informed of any changes.
+                    </p>
+                </div>
+
+                <!-- Section 10 -->
+                <div>
+                    <h3 class="text-2xl font-bold font-display text-slate-900 mb-4">10. Contact Information</h3>
+                    <p class="text-slate-500 font-light leading-relaxed">
+                        Users can contact KDIA RE Park for privacy-related questions, concerns, or requests through the official contact information available on our website.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Govt. Schemes & Policies Section -->
-    <section id="govt-schemes" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <!-- Tab Navigation -->
-            <div class="flex justify-center mb-12 reveal">
-                <div
-                    class="inline-flex bg-white rounded-full p-2 gap-2 shadow-sm border border-slate-100 flex-wrap justify-center">
-                    <button
-                        class="govt-tab active px-8 py-3 rounded-full font-medium transition-all duration-300 hover:text-brand-green"
-                        data-category="policies">
-                        Policies
-                    </button>
-                    <button
-                        class="govt-tab px-8 py-3 rounded-full font-medium transition-all duration-300 hover:text-brand-green"
-                        data-category="schemes">
-                        Schemes
-                    </button>
-                    <button
-                        class="govt-tab px-8 py-3 rounded-full font-medium transition-all duration-300 hover:text-brand-green"
-                        data-category="guidelines">
-                        Guidelines
-                    </button>
-                    <button
-                        class="govt-tab px-8 py-3 rounded-full font-medium transition-all duration-300 hover:text-brand-green"
-                        data-category="tariff-orders">
-                        Tariff Orders
-                    </button>
-                </div>
-            </div>
-
-            <!-- Tab Content / Cards Container -->
-            <div id="govt-cards-container" class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                <!-- Skeleton Loader Cards -->
-                <div class="skeleton-card bg-slate-100/80 rounded-3xl p-8 border border-slate-200/50 animate-pulse h-48 space-y-4">
-                    <div class="h-6 bg-slate-200 rounded w-1/3"></div>
-                    <div class="h-4 bg-slate-200 rounded w-full"></div>
-                    <div class="h-4 bg-slate-200 rounded w-5/6"></div>
-                </div>
-                <div class="skeleton-card bg-slate-100/80 rounded-3xl p-8 border border-slate-200/50 animate-pulse h-48 space-y-4">
-                    <div class="h-6 bg-slate-200 rounded w-1/3"></div>
-                    <div class="h-4 bg-slate-200 rounded w-full"></div>
-                    <div class="h-4 bg-slate-200 rounded w-5/6"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Minimal Footer -->
+    <!-- Footer -->
     <footer class="py-16 bg-white border-t border-slate-100">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
@@ -245,8 +278,7 @@
         </div>
         <div id="chat-messages" class="chat-messages">
             <div class="message ai">
-                Hello! I'm here to help you understand clean energy solutions and KDIA Re Park's offerings. How can I
-                assist you today?
+                Hello! I’m here to help you understand clean energy solutions and KDIA Re Park’s offerings. How can I assist you today?
             </div>
         </div>
         <div class="chat-input-area">

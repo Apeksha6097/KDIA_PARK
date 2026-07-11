@@ -1,4 +1,4 @@
-<?php header("Content-Type: application/javascript"); ?>
+// <?php header("Content-Type: application/javascript"); ?>
 /* assets/js/scripts.php */
 
 // ========================================
@@ -107,34 +107,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // GSAP Reveal Animations
-    if (typeof gsap !== 'undefined') {
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.utils.toArray('.reveal').forEach((el) => {
-            let delay = 0;
-            const inlineDelay = el.style.transitionDelay;
-            if (inlineDelay) {
-                const val = parseFloat(inlineDelay);
-                if (!isNaN(val)) {
-                    // Cap max stagger delay at 200ms and convert to seconds
-                    delay = Math.min(val, 200) / 1000;
-                }
-            }
-            gsap.to(el, {
-                opacity: 1,
-                y: 0,
-                duration: 0.6,
-                delay: delay,
-                ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: el,
-                    start: 'top 85%',
-                    toggleActions: 'play none none reverse'
-                }
-            });
-        });
-    }
+    // GSAP Reveal Animations (Bypassed)
+    document.querySelectorAll('.reveal').forEach((el) => {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+    });
 
     // Initialize Lucide Icons
     if (typeof lucide !== 'undefined') {
@@ -259,12 +236,21 @@ function initEnergyModelTabs() {
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             const targetId = tab.getAttribute('data-tab');
+            const targetContent = document.getElementById(targetId);
             tabs.forEach(t => t.classList.remove('active'));
             contents.forEach(c => c.classList.remove('active'));
             tab.classList.add('active');
-            if (targetContent && typeof gsap !== 'undefined') {
+            if (targetContent) {
                 targetContent.classList.add('active');
-                gsap.fromTo(targetContent, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' });
+                targetContent.style.opacity = '1';
+                targetContent.style.transform = 'none';
+                // Re-apply translation so newly visible tab content uses the active language
+                if (typeof window.applyDiagramLang === 'function') {
+                    window.applyDiagramLang();
+                }
+                if (typeof window.reapplyTranslation === 'function') {
+                    window.reapplyTranslation();
+                }
             }
         });
     });
@@ -407,11 +393,11 @@ function initGovtSchemes() {
 
         if (typeof lucide !== 'undefined') lucide.createIcons();
 
-        if (typeof gsap !== 'undefined' && container.children.length > 0) {
-            gsap.fromTo(container.children,
-                { opacity: 0, y: 20 },
-                { opacity: 1, y: 0, duration: 0.3, stagger: 0.05, ease: 'power2.out' }
-            );
+        if (container.children.length > 0) {
+            Array.from(container.children).forEach(child => {
+                child.style.opacity = '1';
+                child.style.transform = 'none';
+            });
         }
     };
 
@@ -526,37 +512,10 @@ window.addEventListener('load', () => {
     }
 });
 
-// Hero Sun Animation Logic
+// Hero Sun Animation Logic (Disabled breathing/pulsing animation)
 function initHeroAnimation() {
-    if (typeof gsap !== 'undefined') {
-        const heroSun = document.getElementById('hero-sun-container');
-        if (heroSun) {
-            // Reveal the sun container from opacity 0
-            gsap.to(heroSun, {
-                opacity: 1,
-                duration: 1.2,
-                ease: 'power2.out',
-                delay: 0.2
-            });
-
-            // Breathing / Pulsing animation for the inner sun
-            gsap.to('.solar-element-centered', {
-                scale: 1.08,
-                duration: 3.5,
-                repeat: -1,
-                yoyo: true,
-                ease: 'power1.inOut'
-            });
-
-            // Stronger pulsing for the outer glow
-            gsap.to('.radiating-glow-centered', {
-                scale: 1.15,
-                opacity: 0.5,
-                duration: 4.5,
-                repeat: -1,
-                yoyo: true,
-                ease: 'power1.inOut'
-            });
-        }
+    const heroSun = document.getElementById('hero-sun-container');
+    if (heroSun) {
+        heroSun.style.opacity = '1';
     }
 }

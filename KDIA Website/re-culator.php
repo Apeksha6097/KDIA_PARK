@@ -245,50 +245,61 @@
         </div>
     </section>
 
-    <!-- Minimal Footer -->
-    <footer class="pt-10 pb-20 bg-white border-t border-slate-50">
+    <footer class="py-16 bg-white border-t border-slate-100">
         <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-12 mb-16">
-                <div class="md:col-span-2">
-                    <img src="assets/images/logo.png" alt="KDIA RE PARK" class="h-10 w-auto mb-6">
-                    <p class="text-slate-500 font-light leading-relaxed max-w-md">
-                        Empowering communities with clean, renewable energy solutions through innovative solar
-                        infrastructure and sustainable development.
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Column 1: Logo, Description -->
+                <div>
+                    <img src="assets/images/logo.webp" alt="KDIA RE PARK" class="h-10 w-auto mb-6" width="150" height="40" loading="lazy">
+                    <p class="text-slate-500 font-light leading-relaxed text-sm max-w-sm">
+                        KDIA Re Park is a renewable infrastructure platform focused on long-term solar energy ownership.
                     </p>
                 </div>
+
+                <!-- Column 2: Quick Links -->
                 <div>
-                    <h4 class="font-bold text-slate-900 mb-6 font-display">Quick Links</h4>
-                    <ul class="space-y-3 text-slate-500 font-light">
+                    <h4 class="font-bold text-slate-900 mb-6 font-display text-sm uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-3 text-slate-500 font-light text-sm">
                         <li><a href="index.php" class="hover:text-brand-green transition-colors">Home</a></li>
-                        <li><a href="about.php" class="hover:text-brand-green transition-colors">About Us</a></li>
-                        <li><a href="govt-schemes.php" class="hover:text-brand-green transition-colors">Govt.
-                                Schemes</a></li>
-                        <li><a href="re-culator.php" class="hover:text-brand-green transition-colors">Re-Culator</a>
-                        </li>
-                        <li><a href="contact.php" class="hover:text-brand-green transition-colors">Contact</a></li>
+                        <li><a href="about.php" class="hover:text-brand-green transition-colors">Company &amp; Energy Solutions</a></li>
+                        <li><a href="govt-schemes.php" class="hover:text-brand-green transition-colors">Govt. Schemes &amp; Policies</a></li>
+                        <li><a href="re-culator.php" class="hover:text-brand-green transition-colors">Re-Culator</a></li>
+                        <li><a href="contact.php" class="hover:text-brand-green transition-colors">Contact Us</a></li>
                     </ul>
                 </div>
+
+                <!-- Column 3: Customer Service -->
                 <div>
-                    <h4 class="font-bold text-slate-900 mb-6 font-display">Contact</h4>
-                    <ul class="space-y-3 text-slate-500 font-light">
+                    <h4 class="font-bold text-slate-900 mb-6 font-display text-sm uppercase tracking-wider">Customer Service</h4>
+                    <ul class="space-y-3 text-slate-500 font-light text-sm">
+                        <li><a href="privacy-policy.php" class="hover:text-brand-green transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.php" class="hover:text-brand-green transition-colors">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Info -->
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-6 font-display text-sm uppercase tracking-wider">Contact Info</h4>
+                    <ul class="space-y-3 text-slate-500 font-light text-sm">
                         <li class="flex items-start space-x-3">
-                            <i data-lucide="map-pin" class="w-5 h-5 text-brand-green mt-1 flex-shrink-0"></i>
-                            <span>KDIA Re Park, Renewable Energy Zone</span>
+                            <i data-lucide="map-pin" class="w-5 h-5 text-brand-green mt-0.5 flex-shrink-0"></i>
+                            <span>Solar Plaza, Innovation Drive, Green Valley</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <i data-lucide="mail" class="w-5 h-5 text-brand-green flex-shrink-0"></i>
-                            <span>info@kdiarepark.com</span>
+                            <a href="mailto:info@kdiarepark.com" class="hover:text-brand-green transition-colors">info@kdiarepark.com</a>
                         </li>
                         <li class="flex items-center space-x-3">
                             <i data-lucide="phone" class="w-5 h-5 text-brand-green flex-shrink-0"></i>
-                            <span>+91 XXX XXX XXXX</span>
+                            <a href="tel:+1800534273" class="hover:text-brand-green transition-colors">+1 (800) KDIA-RE</a>
                         </li>
                     </ul>
                 </div>
             </div>
+            
+            <!-- Absolute Bottom Copyright -->
             <div class="border-t border-slate-100 pt-8 text-center">
-                <p class="text-slate-400 text-sm tracking-widest uppercase">&copy; 2024 KDIA Re Park. Powered by the
-                    sun.</p>
+                <p class="text-slate-400 text-xs tracking-wider uppercase">&copy; 2024 KDIA RE PARK. ALL RIGHTS RESERVED.</p>
             </div>
         </div>
     </footer>

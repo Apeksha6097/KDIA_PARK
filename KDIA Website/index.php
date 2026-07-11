@@ -151,16 +151,7 @@
                 <p class="text-xl md:text-2xl text-slate-500 leading-relaxed reveal font-normal">
                     KDIA Re Park is a renewable infrastructure platform focused on long-term solar energy ownership.
                 </p>
-                <div class="mt-10 flex flex-wrap justify-center gap-6 reveal" style="transition-delay: 500ms">
-                    <button id="apply-modal-btn"
-                        class="px-10 py-4 brand-gradient-bg text-white rounded-full font-bold text-lg hover:shadow-[0_20px_40px_rgba(251,191,36,0.2)] transition-all transform hover:-translate-y-1">
-                        Apply for Solar Subscription
-                    </button>
-                    <a href="about.php"
-                        class="px-10 py-4 bg-white text-brand-green border-2 border-brand-green rounded-full font-bold text-lg hover:shadow-[0_20px_40px_rgba(141,198,63,0.2)] transition-all transform hover:-translate-y-1">
-                        Explore Our Solutions
-                    </a>
-                </div>
+
             </div>
         </div>
 
@@ -171,239 +162,257 @@
         <!--</div>-->
     </section>
 
-    <!-- Visual Break Secton -->
-    <section class="h-[600px] relative overflow-hidden reveal mt-10">
-        <img src="assets/images/solar1_opt.webp"
-            alt="Solar Infrastructure" class="w-full h-full object-cover" width="1200" height="600" loading="lazy">
-        <div class="absolute inset-0 bg-brand-green/10 mix-blend-multiply"></div>
-        <div class="absolute inset-0 flex items-center justify-center text-center px-6">
-            <h2 class="text-4xl md:text-6xl font-display font-bold text-white drop-shadow-2xl max-w-4xl">
-                Infrastructure Excellence for <span class="text-brand-green">Long-Term Reliability.</span>
-            </h2>
-        </div>
-    </section>
-
-    <!-- Highlights Section -->
-    <section class="py-40 bg-white relative">
+    <!-- Mr. Nitin Kedia Section -->
+    <section class="py-24 bg-white relative">
         <div class="container mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-20 items-center mb-32">
-                <div class="reveal">
-                    <h2 class="text-5xl font-display font-bold mb-8 text-slate-900 leading-tight">Professional
-                        <br>Ownership <span class="text-brand-green">Standards</span>
-                    </h2>
-                    <p class="text-xl text-slate-500 leading-relaxed font-light mb-12">
-                        We don't just build; we own. Our commitment to infrastructure-grade solar assets ensures that
-                        every project meets the highest standards of stability and long-term energy production.
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-stretch max-w-6xl mx-auto">
+                <!-- Text Left -->
+                <div class="reveal flex flex-col justify-center">
+                    <span class="text-brand-green font-bold uppercase tracking-wider text-sm">Founder &amp; Director</span>
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-slate-900 mt-2 mb-6">Mr. Nitin Kedia</h2>
+                    <p class="text-xl md:text-[22px] text-slate-500 font-light leading-[1.8] mb-4">
+                        Mr. Nitin Kedia is an accomplished entrepreneur with extensive business experience in leading large-scale industrial projects. Throughout his professional experience and leadership journey, he has successfully steered multiple infrastructure ventures, achieving remarkable growth and establishing a culture of excellence.
                     </p>
-                    <div class="space-y-6">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-6 h-6 rounded-full bg-brand-green/20 flex items-center justify-center">
-                                <i data-lucide="check" class="text-brand-green w-4 h-4"></i>
-                            </div>
-                            <span class="text-lg text-slate-700 font-medium">Tier-1 Component Selection</span>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="w-6 h-6 rounded-full bg-brand-green/20 flex items-center justify-center">
-                                <i data-lucide="check" class="text-brand-green w-4 h-4"></i>
-                            </div>
-                            <span class="text-lg text-slate-700 font-medium">Real-time Performance Auditing</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="reveal rounded-3xl overflow-hidden shadow-2xl relative group"
-                    style="transition-delay: 200ms">
-                    <img src="assets/images/solar2_opt.webp"
-                        alt="Solar Panels"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" width="1200" height="800" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="glass-card p-10 rounded-3xl reveal border-brand-green/10">
-                    <div class="w-16 h-16 bg-brand-green/10 rounded-2xl flex items-center justify-center mb-8">
-                        <i data-lucide="shield-check" class="text-brand-green w-8 h-8"></i>
-                    </div>
-                    <h3 class="text-3xl font-bold mb-4 font-display">Clean Ownership</h3>
-                    <p class="text-slate-500 leading-relaxed text-lg font-light">
-                        Owning and operating high-performance solar assets for long-term reliability.
+                    <p class="text-xl md:text-[22px] text-slate-500 font-light leading-[1.8] mb-4">
+                        Under his guidance, the organization prioritizes team mentoring, performance-driven growth, and customer-centric development. His key achievements include building long-term trust with stakeholders and delivery partners, ensuring safety and high engineering standards remain at the forefront.
+                    </p>
+                    <p class="text-xl md:text-[22px] text-slate-500 font-light leading-[1.8]">
+                        His significant contribution to the organization is anchored in his commitment to quality, responsible decision-making, customer-centric development, and sustainable growth. Through transparent leadership and hands-on governance, he continues to shape KDIA RE Park as a reliable and future-ready energy partner.
                     </p>
                 </div>
-
-                <div class="glass-card p-10 rounded-3xl reveal border-brand-green/10" style="transition-delay: 150ms">
-                    <div class="w-16 h-16 bg-brand-green/10 rounded-2xl flex items-center justify-center mb-8">
-                        <i data-lucide="trending-up" class="text-brand-green w-8 h-8"></i>
-                    </div>
-                    <h3 class="text-3xl font-bold mb-4 font-display">Long-Term Stability</h3>
-                    <p class="text-slate-500 leading-relaxed text-lg font-light">
-                        Creating stable, predictable value through infrastructure-grade energy returns.
-                    </p>
-                </div>
-
-                <div class="glass-card p-10 rounded-3xl reveal border-brand-green/10" style="transition-delay: 300ms">
-                    <div class="w-16 h-16 bg-brand-green/10 rounded-2xl flex items-center justify-center mb-8">
-                        <i data-lucide="leaf" class="text-brand-green w-8 h-8"></i>
-                    </div>
-                    <h3 class="text-3xl font-bold mb-4 font-display">Sustainable Growth</h3>
-                    <p class="text-slate-500 leading-relaxed text-lg font-light">
-                        Supporting India’s transition to zero emissions while scaling renewable portfolios.
-                    </p>
+                <!-- Portrait Image Right -->
+                <div class="reveal rounded-3xl overflow-hidden shadow-xl border border-slate-100" style="min-height: 400px;">
+                    <img src="assets/images/nitin_kedia1.jpg" alt="Mr. Nitin Kedia" class="w-full h-full object-cover" style="object-position: center top; display: block;" width="400" height="600" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- EV Charging Station Section -->
-    <section class="py-40 bg-slate-50/40 relative">
-        <div class="container mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-20 items-center mb-32">
-                <div class="reveal rounded-3xl overflow-hidden shadow-2xl relative group order-2 lg:order-1"
-                    style="transition-delay: 200ms">
-                    <img src="assets/images/solar3_opt.webp"
-                        alt="EV Charging Station"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" width="1200" height="800" loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                </div>
-                <div class="reveal order-1 lg:order-2">
-                    <h2 class="text-5xl font-display font-bold mb-8 text-slate-900 leading-tight">EV Charging
-                        <br>Infrastructure <span class="text-brand-green">Excellence</span>
-                    </h2>
-                    <p class="text-xl text-slate-500 leading-relaxed font-light mb-12">
-                        We power the future of mobility. Our solar-integrated EV charging network delivers fast,
-                        reliable, and green charging solutions — built for India's electric vehicle revolution.
-                    </p>
-                    <div class="space-y-6">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-6 h-6 rounded-full bg-brand-green/20 flex items-center justify-center">
-                                <i data-lucide="check" class="text-brand-green w-4 h-4"></i>
-                            </div>
-                            <span class="text-lg text-slate-700 font-medium">Solar-Powered DC Fast Chargers</span>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="w-6 h-6 rounded-full bg-brand-green/20 flex items-center justify-center">
-                                <i data-lucide="check" class="text-brand-green w-4 h-4"></i>
-                            </div>
-                            <span class="text-lg text-slate-700 font-medium">24/7 Smart Network Monitoring</span>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="w-6 h-6 rounded-full bg-brand-green/20 flex items-center justify-center">
-                                <i data-lucide="check" class="text-brand-green w-4 h-4"></i>
-                            </div>
-                            <span class="text-lg text-slate-700 font-medium">Zero-Carbon Charging Guarantee</span>
-                        </div>
-                    </div>
-                    <div class="mt-12 flex items-center gap-6">
-                        <a href="land-verification.php"
-                            class="inline-block px-10 py-4 brand-gradient-bg text-white rounded-full font-bold text-lg hover:shadow-[0_20px_40px_rgba(251,191,36,0.2)] transition-all transform hover:-translate-y-1 shrink-0">
-                            Apply Now
-                        </a>
-                        <p class="text-slate-500 font-light text-base leading-relaxed">Host KDIA's solar-powered EV charging stations on your land and earn guaranteed long-term rental income.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="glass-card p-10 rounded-3xl reveal border-brand-green/10">
-                    <div class="w-16 h-16 bg-brand-green/10 rounded-2xl flex items-center justify-center mb-8">
-                        <i data-lucide="zap" class="text-brand-green w-8 h-8"></i>
-                    </div>
-                    <h3 class="text-3xl font-bold mb-4 font-display">Fast Charging</h3>
-                    <p class="text-slate-500 leading-relaxed text-lg font-light">
-                        DC fast chargers delivering up to 150kW — charge your EV in minutes, not hours.
-                    </p>
-                </div>
-
-                <div class="glass-card p-10 rounded-3xl reveal border-brand-green/10" style="transition-delay: 150ms">
-                    <div class="w-16 h-16 bg-brand-green/10 rounded-2xl flex items-center justify-center mb-8">
-                        <i data-lucide="wifi" class="text-brand-green w-8 h-8"></i>
-                    </div>
-                    <h3 class="text-3xl font-bold mb-4 font-display">Smart Network</h3>
-                    <p class="text-slate-500 leading-relaxed text-lg font-light">
-                        IoT-enabled stations with real-time load balancing and remote diagnostics.
-                    </p>
-                </div>
-
-                <div class="glass-card p-10 rounded-3xl reveal border-brand-green/10" style="transition-delay: 300ms">
-                    <div class="w-16 h-16 bg-brand-green/10 rounded-2xl flex items-center justify-center mb-8">
-                        <i data-lucide="car" class="text-brand-green w-8 h-8"></i>
-                    </div>
-                    <h3 class="text-3xl font-bold mb-4 font-display">Green Mobility</h3>
-                    <p class="text-slate-500 leading-relaxed text-lg font-light">
-                        100% renewable-powered charging — accelerating India's shift to zero-emission transport.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Investment Logic Section -->
-    <section class="py-40 bg-slate-50/50 relative overflow-hidden">
+    <!-- Mr. Nitin Kedia – Solar Vision Section -->
+    <section class="py-24 bg-slate-50 relative overflow-hidden">
         <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-4xl mx-auto text-center mb-24">
-                <h2 class="text-5xl font-display font-bold mb-8 reveal text-slate-900">Investment & <span
-                        class="text-brand-green">Savings Logic</span></h2>
-                <p class="text-xl text-slate-600 font-normal reveal">Understanding the financial intelligence behind
-                    renewable transition.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-                <div class="flex gap-8 reveal">
-                    <div
-                        class="shrink-0 w-12 h-12 rounded-full bg-brand-green/10 flex items-center justify-center text-brand-green font-bold">
-                        01</div>
-                    <div>
-                        <h4 class="text-2xl font-bold mb-4">Tariff Protection</h4>
-                        <p class="text-slate-500 font-light leading-relaxed">Savings grow as electricity tariffs
-                            increase over time, providing a natural hedge against rising utility costs.</p>
-                    </div>
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-stretch max-w-6xl mx-auto">
+                <!-- Portrait Image Left -->
+                <div class="reveal rounded-3xl overflow-hidden shadow-xl border border-slate-100 order-2 lg:order-1" style="min-height: 400px;">
+                    <img src="assets/images/nitin_kedia2.jpg" alt="Mr. Nitin Kedia – Solar Vision" class="w-full h-full object-cover" style="object-position: center top; display: block;" width="400" height="600" loading="lazy">
                 </div>
-                <div class="flex gap-8 reveal" style="transition-delay: 200ms">
-                    <div
-                        class="shrink-0 w-12 h-12 rounded-full bg-brand-green/10 flex items-center justify-center text-brand-green font-bold">
-                        02</div>
-                    <div>
-                        <h4 class="text-2xl font-bold mb-4">Direct Offsets</h4>
-                        <p class="text-slate-500 font-light leading-relaxed">Energy generated by solar assets directly
-                            offsets your consumption, significantly reducing monthly bills.</p>
-                    </div>
-                </div>
-                <div class="flex gap-8 reveal" style="transition-delay: 400ms">
-                    <div
-                        class="shrink-0 w-12 h-12 rounded-full bg-brand-green/10 flex items-center justify-center text-brand-green font-bold">
-                        03</div>
-                    <div>
-                        <h4 class="text-2xl font-bold mb-4">Ownership Stability</h4>
-                        <p class="text-slate-500 font-light leading-relaxed">Long-term energy ownership provides price
-                            stability and long-term reduction in operational electricity costs.</p>
-                    </div>
-                </div>
-                <div class="flex gap-8 reveal" style="transition-delay: 600ms">
-                    <div
-                        class="shrink-0 w-12 h-12 rounded-full bg-brand-green/10 flex items-center justify-center text-brand-green font-bold">
-                        04</div>
-                    <div>
-                        <h4 class="text-2xl font-bold mb-4">Future-Ready</h4>
-                        <p class="text-slate-500 font-light leading-relaxed">Transitioning from traditional real estate
-                            to energy infrastructure ensures long-term asset value.</p>
-                    </div>
+                <!-- Text Right -->
+                <div class="reveal order-1 lg:order-2 flex flex-col justify-center">
+                    <span class="text-brand-green font-bold uppercase tracking-wider text-sm">Vision &amp; Future Strategy</span>
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-slate-900 mt-2 mb-6">Director's Vision</h2>
+                    <p class="text-xl md:text-[22px] text-slate-500 font-light leading-[1.8] mb-4">
+                        The Director's Vision for KDIA RE Park is anchored in accelerating the global transition to renewable and clean energy. He envisions a future where clean energy solutions are accessible, reliable, and integrated seamlessly into regional power grids, industrial hubs, and transport networks.
+                    </p>
+                    <p class="text-xl md:text-[22px] text-slate-500 font-light leading-[1.8] mb-4">
+                        To realize this vision, our strategic strategy targets the scaling of solar energy infrastructure alongside the development of high-speed EV charging infrastructure on key corridors. We are also spearheading the adoption of CBG and sustainable energy solutions, converting agricultural and municipal waste into clean energy.
+                    </p>
+                    <p class="text-xl md:text-[22px] text-slate-500 font-light leading-[1.8]">
+                        By creating accessible and future-ready clean energy infrastructure, KDIA is driving local economic resilience. This reflects our long-term commitment to innovation, sustainability, and responsible development, laying the groundwork for a cleaner, greener India for generations to come.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
 
+    <!-- Vision for Solar Section -->
+    <section class="py-24 bg-slate-50 relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <span class="text-brand-green font-bold uppercase tracking-wider text-sm">Our Focus</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-slate-900 mt-2">Vision for Solar</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Clean Energy -->
+                <div class="glass-card p-8 rounded-3xl reveal border-brand-green/10 bg-white">
+                    <div class="w-12 h-12 bg-brand-green/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="sun" class="text-brand-green w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-display">Clean Energy</h3>
+                    <p class="text-slate-500 font-light leading-relaxed">Scaling high-efficiency solar arrays to offset fossil reliance entirely.</p>
+                </div>
+                <!-- EV Infrastructure -->
+                <div class="glass-card p-8 rounded-3xl reveal border-brand-green/10 bg-white" style="transition-delay: 150ms">
+                    <div class="w-12 h-12 bg-brand-green/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="zap" class="text-brand-green w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-display">EV Infrastructure</h3>
+                    <p class="text-slate-500 font-light leading-relaxed">Integrating solar power grids directly into electric vehicle charging systems.</p>
+                </div>
+                <!-- Renewable Future -->
+                <div class="glass-card p-8 rounded-3xl reveal border-brand-green/10 bg-white" style="transition-delay: 300ms">
+                    <div class="w-12 h-12 bg-brand-green/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="leaf" class="text-brand-green w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-display">Renewable Future</h3>
+                    <p class="text-slate-500 font-light leading-relaxed">Decentralizing power generation to provide long-term grid independence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Short Renewable Energy Section -->
+    <section class="py-24 bg-white relative">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center max-w-5xl mx-auto">
+                <div class="reveal">
+                    <span class="text-brand-green font-bold uppercase tracking-wider text-sm">Energy Transition</span>
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-slate-900 mt-2 mb-6">Renewable Solar Solutions</h2>
+                    <p class="text-lg text-slate-500 font-light leading-relaxed mb-8">
+                        Clean solar energy provides zero-emission power that protects your operations from rising utility tariffs. KDIA builds and manages optimized solar park systems to deliver immediate savings.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="shield-check" class="text-brand-green w-5 h-5 shrink-0"></i>
+                            <span class="text-slate-700 font-medium">Guaranteed Carbon Offsets</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="trending-down" class="text-brand-green w-5 h-5 shrink-0"></i>
+                            <span class="text-slate-700 font-medium">Direct Utility Savings</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal rounded-3xl overflow-hidden shadow-2xl relative group" style="transition-delay: 200ms">
+                    <img src="assets/images/solar2_opt.webp" alt="Solar Panels" class="w-full h-[320px] object-cover transition-transform duration-700 group-hover:scale-105" width="600" height="320" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose KDIA Section -->
+    <section class="py-24 bg-slate-50 relative" id="why-kdia">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <span class="text-brand-green font-bold uppercase tracking-wider text-sm">Our Advantage</span>
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-slate-900 mt-2 mb-4">Why <span class="text-brand-green">Choose KDIA</span></h2>
+                <p class="text-xl text-slate-500 font-light leading-relaxed">Key differentiators that set our solar-park infrastructure apart.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+                <div class="reveal flex flex-col items-center text-center glass-card p-8 rounded-3xl bg-white border border-brand-green/10">
+                    <div class="w-14 h-14 bg-brand-green/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="zap" class="text-brand-green w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 font-display">Higher Energy Yield</h4>
+                    <p class="text-slate-500 font-light leading-relaxed">Optimized positioning and industrial-grade hardware drive superior generation capacity.</p>
+                </div>
+                <div class="reveal flex flex-col items-center text-center glass-card p-8 rounded-3xl bg-white border border-brand-green/10" style="transition-delay: 100ms">
+                    <div class="w-14 h-14 bg-brand-green/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="coins" class="text-brand-green w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 font-display">Cost Performance</h4>
+                    <p class="text-slate-500 font-light leading-relaxed">Economies of scale significantly reduce the per-watt cost of clean energy infrastructure.</p>
+                </div>
+                <div class="reveal flex flex-col items-center text-center glass-card p-8 rounded-3xl bg-white border border-brand-green/10" style="transition-delay: 200ms">
+                    <div class="w-14 h-14 bg-brand-green/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="settings" class="text-brand-green w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 font-display">Centralized Ops</h4>
+                    <p class="text-slate-500 font-light leading-relaxed">Professional, round-the-clock maintenance ensures maximum uptime and performance monitoring.</p>
+                </div>
+                <div class="reveal flex flex-col items-center text-center glass-card p-8 rounded-3xl bg-white border border-brand-green/10" style="transition-delay: 300ms">
+                    <div class="w-14 h-14 bg-brand-green/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="activity" class="text-brand-green w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 font-display">Reliable Supply</h4>
+                    <p class="text-slate-500 font-light leading-relaxed">Infrastructure-grade distribution ensures a stable and resilient energy flow to all connections.</p>
+                </div>
+                <div class="reveal flex flex-col items-center text-center glass-card p-8 rounded-3xl bg-white border border-brand-green/10" style="transition-delay: 400ms">
+                    <div class="w-14 h-14 bg-brand-green/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="lock" class="text-brand-green w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 font-display">Price Security</h4>
+                    <p class="text-slate-500 font-light leading-relaxed">Secure long-term energy pricing, protecting your organization from utility tariff inflation.</p>
+                </div>
+                <div class="reveal flex flex-col items-center text-center glass-card p-8 rounded-3xl bg-white border border-brand-green/10" style="transition-delay: 500ms">
+                    <div class="w-14 h-14 bg-brand-green/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="monitor" class="text-brand-green w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 font-display">Live Monitoring</h4>
+                    <p class="text-slate-500 font-light leading-relaxed">Advanced AI dashboards provide real-time transparency into your portfolio's performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-white relative">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-slate-900 mb-6">Start Your Clean Energy Journey</h2>
+                <p class="text-xl text-slate-500 font-light leading-relaxed mb-10">
+                    Subscribe to a shared solar park or allocate EV charging infrastructure on your property today.
+                </p>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <button id="apply-modal-btn" class="px-8 py-3.5 brand-gradient-bg text-white rounded-full font-bold shadow-lg hover:shadow-[0_20px_40px_rgba(251,191,36,0.2)] transition-all transform hover:-translate-y-0.5">
+                        Apply for Solar Subscription
+                    </button>
+                    <a href="contact.php" class="px-8 py-3.5 bg-white text-brand-green border-2 border-brand-green rounded-full font-bold hover:shadow-[0_20px_40px_rgba(141,198,63,0.2)] transition-all transform hover:-translate-y-0.5">
+                        Contact Our Experts
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Minimal Footer -->
-    <footer class="py-20 bg-white border-t border-slate-50">
-        <div class="container mx-auto px-6 text-center">
-            <img src="assets/images/logo.webp" alt="Kdia Re Park Logo"
-                class="h-10 w-auto mx-auto mb-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all" width="150" height="40" loading="lazy">
-            <div class="flex justify-center space-x-12 mb-10 text-slate-400 font-medium">
-                <a href="about.php" class="hover:text-brand-green transition-colors">Company & Energy Solutions</a>
-                <a href="contact.php" class="hover:text-brand-green transition-colors">Contact</a>
+
+    <footer class="py-16 bg-white border-t border-slate-100">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Column 1: Logo, Description -->
+                <div>
+                    <img src="assets/images/logo.webp" alt="KDIA RE PARK" class="h-10 w-auto mb-6" width="150" height="40" loading="lazy">
+                    <p class="text-slate-500 font-light leading-relaxed text-sm max-w-sm">
+                        KDIA Re Park is a renewable infrastructure platform focused on long-term solar energy ownership.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-6 font-display text-sm uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-3 text-slate-500 font-light text-sm">
+                        <li><a href="index.php" class="hover:text-brand-green transition-colors">Home</a></li>
+                        <li><a href="about.php" class="hover:text-brand-green transition-colors">Company &amp; Energy Solutions</a></li>
+                        <li><a href="govt-schemes.php" class="hover:text-brand-green transition-colors">Govt. Schemes &amp; Policies</a></li>
+                        <li><a href="re-culator.php" class="hover:text-brand-green transition-colors">Re-Culator</a></li>
+                        <li><a href="contact.php" class="hover:text-brand-green transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Customer Service -->
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-6 font-display text-sm uppercase tracking-wider">Customer Service</h4>
+                    <ul class="space-y-3 text-slate-500 font-light text-sm">
+                        <li><a href="privacy-policy.php" class="hover:text-brand-green transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.php" class="hover:text-brand-green transition-colors">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Info -->
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-6 font-display text-sm uppercase tracking-wider">Contact Info</h4>
+                    <ul class="space-y-3 text-slate-500 font-light text-sm">
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-brand-green mt-0.5 flex-shrink-0"></i>
+                            <span>Solar Plaza, Innovation Drive, Green Valley</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-brand-green flex-shrink-0"></i>
+                            <a href="mailto:info@kdiarepark.com" class="hover:text-brand-green transition-colors">info@kdiarepark.com</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-brand-green flex-shrink-0"></i>
+                            <a href="tel:+1800534273" class="hover:text-brand-green transition-colors">+1 (800) KDIA-RE</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <p class="text-slate-300 text-sm tracking-widest uppercase">&copy; 2024 Kdia Re Park. All Rights Reserved.
-            </p>
+            
+            <!-- Absolute Bottom Copyright -->
+            <div class="border-t border-slate-100 pt-8 text-center">
+                <p class="text-slate-400 text-xs tracking-wider uppercase">&copy; 2024 KDIA RE PARK. ALL RIGHTS RESERVED.</p>
+            </div>
         </div>
     </footer>
 

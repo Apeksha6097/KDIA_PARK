@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+    <title>KDIA Re Park</title>
+    <style id="expo-reset">
+      /* Structural fix for mobile layout */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%; /* Needed for the flex container to fill the screen */
+      }
+      
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      #root {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-height: 100vh;
+      }
+
+      /* React Navigation Tab Bar Web Override */
+      /* We target the tab bar class if known, or apply globally to elements that look like tab bars */
+      .rn-tab-bar {
+        position: sticky !important;
+        bottom: 0 !important;
+        height: 64px !important;
+        z-index: 100 !important;
+        background-color: white;
+      }
+
+      /* Safe Area support */
+      :root {
+        --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
+      }
+    </style>
+  <link rel="icon" href="/favicon.ico" /></head>
+
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+  </body>
+</html>

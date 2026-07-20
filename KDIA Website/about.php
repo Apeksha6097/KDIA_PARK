@@ -1237,11 +1237,14 @@
                     <div class="reveal">
                         <span class="text-brand-green font-bold uppercase tracking-wider text-sm">About CBG</span>
                         <h2 class="text-5xl font-display font-bold mb-8 tracking-tight text-slate-900 mt-2">What is Compressed Bio Gas?</h2>
+                        <p class="text-2xl text-slate-700 leading-relaxed reveal font-semibold mb-6">
+                            Turning waste into wealth, building energy security, and driving a sustainable future backed by the Government of India.
+                        </p>
                         <p class="text-xl text-slate-500 leading-relaxed reveal font-normal" style="transition-delay: 150ms">
-                            Compressed Bio Gas (CBG) is an eco-friendly renewable fuel produced from organic waste materials. KDIA RE Park is committed to building a circular energy economy by converting agricultural residues, animal manure, and municipal solid waste into high-quality green gas.
+                            Compressed Biogas (CBG) is a purified, high-energy form of biogas produced through the anaerobic decomposition of organic waste materials like agricultural residue (paddy straw, press mud), municipal solid waste, and cattle dung.
                         </p>
                         <p class="text-xl text-slate-500 leading-relaxed reveal font-normal mt-6" style="transition-delay: 200ms">
-                            Our vision is to scale decentralized CBG production facilities that reduce landfill waste, lower greenhouse gas emissions, and supply clean, sustainable energy for vehicles, industries, and commercial applications.
+                            By removing impurities like carbon dioxide and hydrogen sulfide, we extract pure methane (above 90%), making CBG chemically identical to commercially used Compressed Natural Gas (CNG). It is a 100% green, renewable, and eco-friendly automotive and industrial fuel that lowers carbon footprints and empowers rural economies.
                         </p>
                     </div>
                     <div class="reveal rounded-3xl overflow-hidden shadow-2xl" style="transition-delay: 300ms">
@@ -1254,35 +1257,64 @@
         <!-- SECTION 2 – CBG Strategic Framework -->
         <section class="py-24 bg-slate-50/30 border-t border-slate-50">
             <div class="container mx-auto px-6">
-                <h2 class="text-5xl font-display font-bold text-center mb-24 reveal text-slate-900">CBG Strategic <span class="text-brand-green">Framework</span></h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="glass-card p-10 rounded-3xl reveal border-brand-green/10 bg-white">
-                        <div class="w-14 h-14 bg-brand-green/10 rounded-2xl flex items-center justify-center mb-8">
-                            <i data-lucide="target" class="text-brand-green w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 font-display text-slate-900">Feedstock Sourcing</h3>
-                        <p class="text-slate-500 font-light leading-relaxed text-base">Assess and secure agricultural residue, organic waste, and biomass supplies from regional farms and municipalities.</p>
+                <h2 class="text-5xl font-display font-bold text-center mb-16 reveal text-slate-900">CBG Strategic <span class="text-brand-green">Framework</span></h2>
+                
+                <!-- PM Quote and National Vision -->
+                <div class="max-w-4xl mx-auto mb-16 text-center">
+                    <p class="text-xl text-slate-600 leading-relaxed font-light mb-8 reveal">
+                        India is currently undergoing an unprecedented clean energy transition, with Prime Minister Narendra Modi and the Ministry of Petroleum and Natural Gas placing CBG at the absolute forefront of the national agenda. Driven by the vision of achieving Net-Zero Emissions by 2070 and cutting down heavy reliance on expensive crude oil imports, the central government has transformed the CBG sector into a lucrative, zero-risk avenue for entrepreneurs and investors.
+                    </p>
+                    <div class="bg-gradient-to-r from-brand-green/10 to-brand-green/5 border-l-4 border-brand-green p-8 rounded-r-3xl text-left reveal" style="transition-delay: 150ms">
+                        <p class="text-lg text-slate-800 italic leading-relaxed">
+                            "What was once treated as waste is now powering our progress. We are actively turning farm and organic waste into clean fuel, boosting rural incomes, and dramatically lowering emissions."
+                        </p>
+                        <p class="text-sm text-slate-500 font-bold mt-4">
+                            -- Reflecting the vision of PM Narendra Modi
+                        </p>
                     </div>
-                    <div class="glass-card p-10 rounded-3xl reveal border-brand-green/10 bg-white" style="transition-delay: 150ms">
-                        <div class="w-14 h-14 bg-brand-green/10 rounded-2xl flex items-center justify-center mb-8">
-                            <i data-lucide="layers" class="text-brand-green w-7 h-7"></i>
+                </div>
+
+                <!-- Frameworks & Subsidies Grid -->
+                <div class="grid lg:grid-cols-2 gap-12 mt-12">
+                    <!-- Key Central Government Frameworks & Incentives -->
+                    <div class="space-y-8 reveal" style="transition-delay: 200ms">
+                        <h3 class="text-2xl font-display font-bold text-slate-900 border-b pb-4 border-slate-100 flex items-center gap-3">
+                            <i data-lucide="shield-check" class="text-brand-green w-6 h-6"></i>
+                            Key Central Government Frameworks &amp; Incentives
+                        </h3>
+
+                        <div class="glass-card p-8 rounded-3xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-all">
+                            <h4 class="text-lg font-bold text-slate-900 mb-2">Mandatory CBG Blending Obligation (CBO)</h4>
+                            <p class="text-slate-500 font-light leading-relaxed text-sm">
+                                Following directives from the National Biofuels Coordination Committee (NBCC), the central government has made it legally mandatory for City Gas Distribution companies to blend CBG into the national CNG (transportation) and PNG (domestic) networks. Starting at 1% for FY 2025-26, the mandate scales up to 3% in FY 2026-27 and hits 5% by 2028-29, creating an astronomical, guaranteed consumer base.
+                            </p>
                         </div>
-                        <h3 class="text-xl font-bold mb-4 font-display text-slate-900">Advanced Processing</h3>
-                        <p class="text-slate-500 font-light leading-relaxed text-base">Employ state-of-the-art anaerobic digestion and gas purification systems to achieve high-methane purity.</p>
+                        <div class="glass-card p-8 rounded-3xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-all">
+                            <h4 class="text-lg font-bold text-slate-900 mb-2">The GOBARdhan Scheme &amp; Organic Manure Subsidies</h4>
+                            <p class="text-slate-500 font-light leading-relaxed text-sm">
+                                The government isn't just focusing on the gas. Under the GOBARdhan scheme, the government provides Market Development Assistance (MDA) of 1,500 per MT to help CBG plants successfully market and sell Fermented Organic Manure (FOM)—their primary waste-by-product—creating a highly profitable secondary revenue stream.
+                            </p>
+                        </div>
                     </div>
-                    <div class="glass-card p-10 rounded-3xl reveal border-brand-green/10 bg-white" style="transition-delay: 300ms">
-                        <div class="w-14 h-14 bg-brand-green/10 rounded-2xl flex items-center justify-center mb-8">
-                            <i data-lucide="zap" class="text-brand-green w-7 h-7"></i>
+
+                    <!-- Financial Support & Subsidies -->
+                    <div class="space-y-8 reveal" style="transition-delay: 300ms">
+                        <h3 class="text-2xl font-display font-bold text-slate-900 border-b pb-4 border-slate-100 flex items-center gap-3">
+                            <i data-lucide="badge-indian-rupee" class="text-brand-green w-6 h-6"></i>
+                            Financial Support &amp; Subsidies
+                        </h3>
+                        <div class="glass-card p-8 rounded-3xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-all">
+                            <h4 class="text-lg font-bold text-slate-900 mb-2">Massive Central Financial Assistance (CFA)</h4>
+                            <p class="text-slate-500 font-light leading-relaxed text-sm">
+                                The Ministry of New and Renewable Energy (MNRE) provides generous capital subsidies. Developers can get up to 4 crore per plant (with a cap of 10 crore per project) in direct capital support, greatly slashing initial setup costs.
+                            </p>
                         </div>
-                        <h3 class="text-xl font-bold mb-4 font-display text-slate-900">Bottling &amp; Grid</h3>
-                        <p class="text-slate-500 font-light leading-relaxed text-base">Establish high-pressure bottling and pipeline injection networks for reliable distribution to industrial and automotive clients.</p>
-                    </div>
-                    <div class="glass-card p-10 rounded-3xl reveal border-brand-green/10 bg-white" style="transition-delay: 450ms">
-                        <div class="w-14 h-14 bg-brand-green/10 rounded-2xl flex items-center justify-center mb-8">
-                            <i data-lucide="settings" class="text-brand-green w-7 h-7"></i>
+                        <div class="glass-card p-8 rounded-3xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-all">
+                            <h4 class="text-lg font-bold text-slate-900 mb-2">A Resolution to Double Taxation</h4>
+                            <p class="text-slate-500 font-light leading-relaxed text-sm">
+                                In the latest Union Budget, the Central Government completely exempted the central excise duty on the biogas portion of blended CNG. This eliminates structural tax burdens and makes the production economics vastly more profitable for developers.
+                            </p>
                         </div>
-                        <h3 class="text-xl font-bold mb-4 font-display text-slate-900">Circular Economy</h3>
-                        <p class="text-slate-500 font-light leading-relaxed text-base">Recover nutrient-rich organic bio-fertilizer as a valuable byproduct, promoting chemical-free farming and soil health.</p>
                     </div>
                 </div>
             </div>
@@ -1300,8 +1332,11 @@
                         <h2 class="text-5xl font-display font-bold mb-8 text-slate-900 leading-tight">
                             CBG Solutions &amp; <br>Infrastructure <span class="text-brand-green">Excellence</span>
                         </h2>
-                        <p class="text-xl text-slate-500 leading-relaxed font-light mb-12">
-                            We power the transition to clean bio-energy. Our advanced CBG facilities offer waste-to-energy conversion systems that supply sustainable fuel while providing waste disposal solutions. Partners and landowners can lease locations for biogas plants or join our feedstock supply network to generate guaranteed long-term revenue.
+                        <p class="text-xl text-slate-500 leading-relaxed font-light mb-6">
+                            As the nation charges ahead with PM Modi’s green vision, we stand ready to help bridge the gap between technology, government policy, and seamless execution. Whether you are looking for pure high-grade CBG fuel, eco-friendly organic fertilizers, or end-to-end CBG project setup consulting, our platform is built to align directly with India's clean-energy goals.
+                        </p>
+                        <p class="text-xl text-slate-700 leading-relaxed font-semibold mb-12">
+                            Join hands with us to turn organic waste into national wealth.
                         </p>
                         <div class="space-y-6">
                             <div class="flex items-center space-x-4">

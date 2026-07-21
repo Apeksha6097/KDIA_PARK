@@ -1,4 +1,4 @@
-<?php header("Content-Type: application/javascript"); ?>
+<?php header('Content-Type: application/javascript'); ?>
 /* assets/js/scripts.php */
 
 // ========================================

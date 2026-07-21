@@ -121,13 +121,13 @@
         </div>
     </nav>
 
-    <section class="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden bg-white">
+    <section class="relative flex flex-col items-center justify-center pt-20 pb-10 overflow-hidden bg-white">
         <!-- Global atmospheric particles (very low density) -->
         <div id="tsparticles" class="absolute inset-0 pointer-events-none opacity-20"></div>
 
         <div class="container mx-auto px-6 relative z-10 text-center flex flex-col items-center">
             <!-- Headline above sun -->
-            <div class="max-w-4xl mx-auto mt-20">
+            <div class="max-w-4xl mx-auto mt-10 md:mt-12">
                 <h1
                     class="text-4xl md:text-5xl font-display font-bold leading-tight tracking-tight text-slate-900 mb-4 opacity-1">
                     Powering Tomorrow
@@ -138,8 +138,8 @@
             <!-- Centered Sun & Localized Particles -->
             <div class="relative w-[700px] h-[700px] flex items-center justify-center opacity-0"
                 id="hero-sun-container">
-                <!-- Localized particles container - only around the sun -->
-                <div id="sun-particles" class="absolute inset-0 pointer-events-none z-0"></div>
+                <!-- Localized particles container - extended left and right -->
+                <div id="sun-particles" class="absolute -left-20 -right-20 inset-y-0 md:-left-36 md:-right-36 pointer-events-none z-0"></div>
 
                 <!-- Solar sun anchor -->
                 <div class="solar-element-centered"></div>
@@ -148,10 +148,18 @@
 
             <!-- Support text -->
             <div class="max-w-2xl mx-auto mt-16">
-                <p class="text-xl md:text-2xl text-slate-500 leading-relaxed reveal font-normal">
+                <p class="text-xl md:text-2xl text-slate-500 leading-relaxed reveal font-normal mb-8">
                     KDIA Re Park is a renewable infrastructure platform focused on long-term solar energy ownership.
                 </p>
 
+                <div class="flex flex-wrap justify-center gap-5">
+                    <button id="apply-modal-btn" class="px-8 py-3.5 brand-gradient-bg text-white rounded-full font-bold text-lg shadow-lg hover:shadow-[0_20px_40px_rgba(251,191,36,0.3)] transition-all transform hover:-translate-y-0.5">
+                        Apply for Solar Subscription
+                    </button>
+                    <a href="about.php#solutions" class="px-8 py-3.5 bg-white text-brand-green border-2 border-brand-green rounded-full font-bold text-lg hover:shadow-[0_20px_40px_rgba(141,198,63,0.2)] transition-all transform hover:-translate-y-0.5">
+                        Explore Our Solutions
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -162,51 +170,63 @@
         <!--</div>-->
     </section>
 
+    <!-- Infrastructure Banner Section -->
+    <section class="relative h-[540px] md:h-[620px] overflow-hidden bg-slate-900 flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/solar1_opt.webp" alt="Solar Infrastructure" class="w-full h-full object-cover object-center" width="1920" height="800" loading="lazy">
+            <div class="absolute inset-0 bg-slate-900/20"></div>
+        </div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h2 class="text-4xl md:text-6xl font-display font-bold text-white tracking-tight leading-tight max-w-4xl mx-auto drop-shadow-md">
+                Infrastructure Excellence for <br class="hidden sm:inline">
+                <span class="text-brand-green">Long-Term Reliability.</span>
+            </h2>
+        </div>
+    </section>
+
     <!-- Mr. Nitin Kedia Section -->
-    <section class="py-24 bg-white relative">
+    <section class="pt-16 pb-8 bg-white relative">
         <div class="container mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-stretch max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
                 <!-- Text Left -->
                 <div class="reveal flex flex-col justify-center">
                     <span class="text-brand-green font-bold uppercase tracking-wider text-sm">Founder &amp; Director</span>
-                    <h2 class="text-4xl md:text-5xl font-display font-bold text-slate-900 mt-2 mb-6">Mr. Nitin Kedia</h2>
-                    <p class="text-xl md:text-[22px] text-slate-500 font-light leading-[1.8] mb-4">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-slate-900 mt-2 mb-6 border-l-4 border-brand-green pl-4">Mr. Nitin Kedia</h2>
+                    <p class="text-lg md:text-xl text-slate-600 font-light leading-relaxed text-left mb-6">
                         Mr. Nitin Kedia is an accomplished entrepreneur with extensive business experience in leading large-scale industrial projects. Throughout his professional experience and leadership journey, he has successfully steered multiple infrastructure ventures, achieving remarkable growth and establishing a culture of excellence.
                     </p>
-                    <p class="text-xl md:text-[22px] text-slate-500 font-light leading-[1.8] mb-4">
-                        Under his guidance, the organization prioritizes team mentoring, performance-driven growth, and customer-centric development. His key achievements include building long-term trust with stakeholders and delivery partners, ensuring safety and high engineering standards remain at the forefront.
-                    </p>
-                    <p class="text-xl md:text-[22px] text-slate-500 font-light leading-[1.8]">
+                    <p class="text-lg md:text-xl text-slate-600 font-light leading-relaxed text-left">
                         His significant contribution to the organization is anchored in his commitment to quality, responsible decision-making, customer-centric development, and sustainable growth. Through transparent leadership and hands-on governance, he continues to shape KDIA RE Park as a reliable and future-ready energy partner.
                     </p>
                 </div>
                 <!-- Portrait Image Right -->
-                <div class="reveal rounded-3xl overflow-hidden shadow-xl border border-slate-100" style="min-height: 400px;">
-                    <img src="assets/images/nitin_kedia1.jpg" alt="Mr. Nitin Kedia" class="w-full h-full object-cover" style="object-position: center top; display: block;" width="400" height="600" loading="lazy">
+                <div class="reveal flex justify-center items-center">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white ring-1 ring-slate-200 max-w-[420px] w-full h-[450px] bg-amber-400/10">
+                        <img src="assets/images/nitin_kedia1.jpg" alt="Mr. Nitin Kedia" class="w-full h-full object-cover object-top block" width="420" height="450" loading="lazy">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Mr. Nitin Kedia – Solar Vision Section -->
-    <section class="py-24 bg-slate-50 relative overflow-hidden">
+    <section class="pt-8 pb-16 bg-slate-50 relative overflow-hidden">
         <div class="container mx-auto px-6 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-stretch max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
                 <!-- Portrait Image Left -->
-                <div class="reveal rounded-3xl overflow-hidden shadow-xl border border-slate-100 order-2 lg:order-1" style="min-height: 400px;">
-                    <img src="assets/images/nitin_kedia2.jpg" alt="Mr. Nitin Kedia – Solar Vision" class="w-full h-full object-cover" style="object-position: center top; display: block;" width="400" height="600" loading="lazy">
+                <div class="reveal flex justify-center items-center order-2 lg:order-1">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white ring-1 ring-slate-200 max-w-[420px] w-full h-[450px]">
+                        <img src="assets/images/nitin_kedia2.jpg" alt="Mr. Nitin Kedia – Solar Vision" class="w-full h-full object-cover object-top block" width="420" height="450" loading="lazy">
+                    </div>
                 </div>
                 <!-- Text Right -->
                 <div class="reveal order-1 lg:order-2 flex flex-col justify-center">
                     <span class="text-brand-green font-bold uppercase tracking-wider text-sm">Vision &amp; Future Strategy</span>
-                    <h2 class="text-4xl md:text-5xl font-display font-bold text-slate-900 mt-2 mb-6">Director's Vision</h2>
-                    <p class="text-xl md:text-[22px] text-slate-500 font-light leading-[1.8] mb-4">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-slate-900 mt-2 mb-6 border-l-4 border-brand-green pl-4">Director's Vision</h2>
+                    <p class="text-lg md:text-xl text-slate-600 font-light leading-relaxed text-left mb-6">
                         The Director's Vision for KDIA RE Park is anchored in accelerating the global transition to renewable and clean energy. He envisions a future where clean energy solutions are accessible, reliable, and integrated seamlessly into regional power grids, industrial hubs, and transport networks.
                     </p>
-                    <p class="text-xl md:text-[22px] text-slate-500 font-light leading-[1.8] mb-4">
-                        To realize this vision, our strategic strategy targets the scaling of solar energy infrastructure alongside the development of high-speed EV charging infrastructure on key corridors. We are also spearheading the adoption of CBG and sustainable energy solutions, converting agricultural and municipal waste into clean energy.
-                    </p>
-                    <p class="text-xl md:text-[22px] text-slate-500 font-light leading-[1.8]">
+                    <p class="text-lg md:text-xl text-slate-600 font-light leading-relaxed text-left">
                         By creating accessible and future-ready clean energy infrastructure, KDIA is driving local economic resilience. This reflects our long-term commitment to innovation, sustainability, and responsible development, laying the groundwork for a cleaner, greener India for generations to come.
                     </p>
                 </div>

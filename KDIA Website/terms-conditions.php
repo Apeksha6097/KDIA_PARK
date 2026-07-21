@@ -189,7 +189,7 @@
                     </p>
                 </div>
 
-                <!-- Section 10 -->class="gl
+                <!-- Section 10 -->
                 <div>
                     <h3 class="text-2xl font-bold font-display text-slate-900 mb-4">10. Contact and Queries</h3>
                     <p class="text-slate-500 font-light leading-relaxed">

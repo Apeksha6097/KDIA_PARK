@@ -107,52 +107,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // GSAP Reveal Animations
-    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-        gsap.registerPlugin(ScrollTrigger);
-
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-        if (!prefersReducedMotion) {
-            document.querySelectorAll('.reveal').forEach((el) => {
-                // Parse inline transition delay if specified
-                let delaySeconds = 0;
-                const styleAttr = el.getAttribute('style');
-                if (styleAttr && styleAttr.includes('transition-delay')) {
-                    const match = styleAttr.match(/transition-delay:\s*(\d+)ms/);
-                    if (match) {
-                        delaySeconds = parseFloat(match[1]) / 1000;
-                    }
-                }
-
-                gsap.fromTo(el, 
-                    { opacity: 0, y: 20 },
-                    { 
-                        opacity: 1, 
-                        y: 0, 
-                        duration: 0.8, 
-                        delay: delaySeconds,
-                        ease: "power2.out",
-                        scrollTrigger: {
-                            trigger: el,
-                            start: "top 88%",
-                            toggleActions: "play none none none"
-                        }
-                    }
-                );
-            });
-        } else {
-            document.querySelectorAll('.reveal').forEach((el) => {
-                el.style.opacity = '1';
-                el.style.transform = 'none';
-            });
-        }
-    } else {
-        document.querySelectorAll('.reveal').forEach((el) => {
-            el.style.opacity = '1';
-            el.style.transform = 'none';
-        });
-    }
+    // GSAP Reveal Animations (Bypassed to stop animations)
+    document.querySelectorAll('.reveal').forEach((el) => {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+    });
 
     // Initialize Lucide Icons
     if (typeof lucide !== 'undefined') {
@@ -174,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeroAnimation();
 });
 
-// Particle Background Initialization Helper
+// Particle Background Initialization Helper (Active for Sun Circle)
 function initParticles(containerId, densityFactor = 1) {
     if (typeof tsParticles !== 'undefined') {
         const isMobile = window.innerWidth < 768;
@@ -283,16 +242,8 @@ function initEnergyModelTabs() {
             tab.classList.add('active');
             if (targetContent) {
                 targetContent.classList.add('active');
-                const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-                if (typeof gsap !== 'undefined' && !prefersReducedMotion) {
-                    gsap.fromTo(targetContent, 
-                        { opacity: 0, y: 10 },
-                        { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }
-                    );
-                } else {
-                    targetContent.style.opacity = '1';
-                    targetContent.style.transform = 'none';
-                }
+                targetContent.style.opacity = '1';
+                targetContent.style.transform = 'none';
                 // Re-apply translation so newly visible tab content uses the active language
                 if (typeof window.applyDiagramLang === 'function') {
                     window.applyDiagramLang();
@@ -452,18 +403,13 @@ function initGovtSchemes() {
         if (typeof lucide !== 'undefined') lucide.createIcons();
 
         if (container.children.length > 0) {
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (typeof gsap !== 'undefined' && !prefersReducedMotion) {
-                gsap.fromTo(container.children, 
-                    { opacity: 0, y: 15 },
-                    { opacity: 1, y: 0, duration: 0.5, stagger: 0.08, ease: "power2.out" }
-                );
-            } else {
-                Array.from(container.children).forEach(child => {
-                    child.style.opacity = '1';
-                    child.style.transform = 'none';
-                });
-            }
+            Array.from(container.children).forEach(child => {
+                child.style.opacity = '1';
+                child.style.transform = 'none';
+            });
+        }
+        if (typeof window.reapplyTranslation === 'function') {
+            window.reapplyTranslation();
         }
     };
 

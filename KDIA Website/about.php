@@ -1268,9 +1268,6 @@
                         <p class="text-lg text-slate-800 italic leading-relaxed">
                             "What was once treated as waste is now powering our progress. We are actively turning farm and organic waste into clean fuel, boosting rural incomes, and dramatically lowering emissions."
                         </p>
-                        <p class="text-sm text-slate-500 font-bold mt-4">
-                            -- Reflecting the vision of PM Narendra Modi
-                        </p>
                     </div>
                 </div>
 
@@ -1889,16 +1886,8 @@
                     tab.classList.add('active');
                     if (targetContent) {
                         targetContent.classList.add('active');
-                        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-                        if (typeof gsap !== 'undefined' && !prefersReducedMotion) {
-                            gsap.fromTo(targetContent, 
-                                { opacity: 0, y: 10 },
-                                { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }
-                            );
-                        } else {
-                            targetContent.style.opacity = '1';
-                            targetContent.style.transform = 'none';
-                        }
+                        targetContent.style.opacity = '1';
+                        targetContent.style.transform = 'none';
                         if (typeof window.applyDiagramLang === 'function') window.applyDiagramLang();
                         if (typeof window.reapplyTranslation === 'function') window.reapplyTranslation();
                     }
@@ -1918,16 +1907,8 @@
                     tab.classList.add('active');
                     if (targetContent) {
                         targetContent.classList.add('active');
-                        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-                        if (typeof gsap !== 'undefined' && !prefersReducedMotion) {
-                            gsap.fromTo(targetContent, 
-                                { opacity: 0, y: 10 },
-                                { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }
-                            );
-                        } else {
-                            targetContent.style.opacity = '1';
-                            targetContent.style.transform = 'none';
-                        }
+                        targetContent.style.opacity = '1';
+                        targetContent.style.transform = 'none';
                         if (typeof window.applyDiagramLang === 'function') window.applyDiagramLang();
                         if (typeof window.reapplyTranslation === 'function') window.reapplyTranslation();
                     }

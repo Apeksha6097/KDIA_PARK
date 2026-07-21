@@ -128,22 +128,22 @@
                 <div
                     class="inline-flex bg-white rounded-full p-2 gap-2 shadow-sm border border-slate-100 flex-wrap justify-center">
                     <button
-                        class="govt-tab active px-8 py-3 rounded-full font-medium transition-all duration-300 hover:text-brand-green"
+                        class="govt-tab active px-8 py-3 rounded-full font-medium transition-all duration-300"
                         data-category="policies">
                         Policies
                     </button>
                     <button
-                        class="govt-tab px-8 py-3 rounded-full font-medium transition-all duration-300 hover:text-brand-green"
+                        class="govt-tab px-8 py-3 rounded-full font-medium transition-all duration-300"
                         data-category="schemes">
                         Schemes
                     </button>
                     <button
-                        class="govt-tab px-8 py-3 rounded-full font-medium transition-all duration-300 hover:text-brand-green"
+                        class="govt-tab px-8 py-3 rounded-full font-medium transition-all duration-300"
                         data-category="guidelines">
                         Guidelines
                     </button>
                     <button
-                        class="govt-tab px-8 py-3 rounded-full font-medium transition-all duration-300 hover:text-brand-green"
+                        class="govt-tab px-8 py-3 rounded-full font-medium transition-all duration-300"
                         data-category="tariff-orders">
                         Tariff Orders
                     </button>

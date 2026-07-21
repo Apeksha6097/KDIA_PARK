@@ -1,4 +1,4 @@
-// <?php header('Content-Type: application/javascript'); ?>
+<?php header('Content-Type: application/javascript'); ?>
 /**
  * KDIA Website Translation Service using Devnagri Translation API
  */

@@ -185,7 +185,7 @@
     </section>
 
     <!-- Mr. Nitin Kedia Section -->
-    <section class="pt-16 pb-8 bg-white relative">
+    <section class="py-20 md:py-24 bg-white relative">
         <div class="container mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
                 <!-- Text Left -->
@@ -210,7 +210,7 @@
     </section>
 
     <!-- Mr. Nitin Kedia – Solar Vision Section -->
-    <section class="pt-8 pb-16 bg-slate-50 relative overflow-hidden">
+    <section class="py-20 md:py-24 bg-slate-50 relative overflow-hidden">
         <div class="container mx-auto px-6 relative z-10">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
                 <!-- Portrait Image Left -->
